@@ -27,6 +27,7 @@
 
   @media (max-width: $tablet-width) {
     color: $white;
+    border: none;
   }
 
   &::placeholder {

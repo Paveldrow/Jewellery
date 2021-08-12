@@ -81,6 +81,12 @@ padding-bottom: 44px;
   }
 }
 
+.page-header--open-menu .page-header__search-form {
+  @media (max-width: $tablet-width) {
+  display: flex
+  }
+}
+
 .page-header__index-link {
   margin-left: auto;
   margin-right: auto;
