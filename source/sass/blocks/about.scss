@@ -1,0 +1,17 @@
+.about {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.about__item {
+  @media (max-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.about__link {
+  font-size: 18px;
+  line-height: 23px;
+  color: $about-header;
+}
