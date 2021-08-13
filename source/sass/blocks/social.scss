@@ -1,0 +1,20 @@
+.social  {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.social__item {
+  margin-bottom: 10px;
+}
+
+.social__link {
+  color: $white;
+}
+
+.social__icon {
+  width: 15px;
+  height: 15px;
+  fill: $white;
+
+}

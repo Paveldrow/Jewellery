@@ -10,7 +10,7 @@
 </head>
 
 <body class="page__body">
-  <header class="page-header">
+  <header class="page-header wrapper">
     <nav class="page-header__main-nav">
       <button class="page-header__button-menu"><span class="visually-hidden">Меню</span>
         <svg class="page-header__icon-menu" width="27" height="18">
@@ -20,7 +20,7 @@
       <form class="page-header__search-form search-form" action="https://echo.htmlacademy.ru" method="POST">
         <input type="search" placeholder="Type here to search" aria-label="Site search">
         <button class="search-form__button-submit" type="submit">
-          <span class="visually-hidden">Поиск</span>
+          <span class="visually-hidden">Search</span>
           <svg class="search-form__icon-search" width="14" height="14">
             <use xlink:href="./img/sprite_auto.svg#icon-search-button"></use>
           </svg>
@@ -55,6 +55,55 @@
       </ul>
     </nav>
   </header>
+  <main class="page-main"></main>
+  <footer class="page-footer wrapper">
+    <div class="page-footer__sign-up sign-up">
+      <p class="sign-up__title">The good stuff in your inbox</p>
+      <p class="sign-up__subtitle">News and updates from CH. No spam, we promise.</p>
+      <form class="sigh-up__form" action="https://echo.htmlacademy.ru" method="POST">
+        <input type="text" placeholder="Your E-mail" aria-label="Enter e-mail for sign up" required>
+        <button class="sigh-up__button-submit" type="submit">Sign Up
+          <svg class="sigh-up__button-icon" width="30" height="11">
+            <use xlink:href="./img/sprite_auto.svg#icon-arrow"></use>
+          </svg>
+        </button>
+      </form>
+    </div>
+    <div class="page-footer__service service">
+      <p class="service__item"><a class="service__link" href="#">Ordering & Payment</a></p>
+      <p class="service__item"><a class="service__link" href="#">Terms & Conditions</a></p>
+      <p class="service__item"><a class="service__link" href="#">Returns & Exchanges</a></p>
+      <p class="service__item"><a class="service__link" href="#">Delivery</a></p>
+    </div>
+    <div class="page-footer__service service">
+      <p class="service__item"><a class="service__link" href="#">About CH</a></p>
+      <p class="service__item"><a class="service__link" href="#">Stores & Hours</a></p>
+      <p class="service__item"><a class="service__link" href="#">Jobs</a></p>
+      <p class="service__item"><a class="service__link" href="#">Contact Us</a></p>
+    </div>
+    <ul class="page-footer__social social">
+      <li class="social__item"><a class="social__link" href="#">
+          <svg class="social__icon" width="8" height="15">
+            <use xlink:href="./img/sprite_auto.svg#icon-facebook"></use>
+          </svg>
+          <span class="social__name">Facebook</span></a></li>
+      <li class="social__item"><a class="social__link" href="#">
+          <svg class="social__icon" width="15" height="15">
+            <use xlink:href="./img/sprite_auto.svg#icon-instagram"></use>
+          </svg>
+          <span class="social__name">Instagram</span></a></li>
+      <li class="social__item"><a class="social__link" href="#">
+          <svg class="social__icon" width="16" height="15">
+            <use xlink:href="./img/sprite_auto.svg#icon-pinterest"></use>
+          </svg>
+          <span class="social__name">Pinterest</span></a></li>
+      <li class="social__item"><a class="social__link" href="#">
+          <svg class="social__icon" width="15" height="13">
+            <use xlink:href="./img/sprite_auto.svg#icon-twitter"></use>
+          </svg>
+          <span class="social__name">Twitter</span></a></li>
+    </ul>
+  </footer>
   <script src="js/script.js"></script>
 </body>
 

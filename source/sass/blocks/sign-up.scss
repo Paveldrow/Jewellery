@@ -1,0 +1,63 @@
+.sign-up__title {
+  margin: 0;
+  margin-bottom: 10px;
+  font-family: 'Cormorant Garamond';
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 44px;
+  letter-spacing: 0.02em;
+  color: $white;
+}
+
+.sign-up__subtitle {
+  margin: 0;
+  margin-bottom: 42px;
+  font-weight: 400;
+  color: $light;
+}
+
+.sigh-up__form {
+  padding-bottom: 6px;
+  border-bottom: 1px solid $white;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 40px;
+  }
+}
+
+.sigh-up__form input {
+  width: 370px;
+  margin-right: 13px;
+  background-color: transparent;
+  border: none;
+  color: $white;
+  font-family: 'Poppins';
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+
+  @media (max-width: $tablet-width) {
+    width: auto;
+  }
+
+  &::placeholder {
+    color: $white;
+  }
+}
+
+.sigh-up__button-submit {
+  font-family: 'Poppins';
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  background-color: transparent;
+  border: none;
+  color: $white;
+}
+
+.sigh-up__button-icon {
+  margin-left: 8px;
+  margin-bottom: 1px;
+  stroke: $white;
+  transform: rotate(180deg);
+}

@@ -20,8 +20,22 @@ const menuToggle = function () {
 
   buttonMenu.addEventListener('click', () => {
     pageHeader.classList.toggle('page-header--open-menu');
-  })
-}
+  });
+};
 
-menuToggle()
-;
+const searchInputClean = function () {
+  const searchInput = document.querySelector('.search-form > input');
+
+  if (window.innerWidth <= 1023) {
+    searchInput.placeholder = '';
+  } else {
+    searchInput.placeholder = 'Type here to search';
+  };
+};
+
+window.addEventListener('resize', () => {
+searchInputClean();
+});
+
+menuToggle();
+

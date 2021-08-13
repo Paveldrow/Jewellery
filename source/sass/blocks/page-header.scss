@@ -1,17 +1,8 @@
 .page-header {
   padding-top: 30px;
-  padding-left: 98px;
-  padding-right: 98px;
-
-  @media (max-width: $tablet-width) {
-    padding-left: 45px;
-    padding-right: 43px;
-  }
 
   @media (max-width: $mobile-width) {
     padding-top: 20px;
-    padding-left: 15px;
-    padding-right: 15px;
   }
 
   &--open-menu {
@@ -41,9 +32,6 @@ padding-bottom: 44px;
   padding: 0;
   background-color: transparent;
   border: none;
-  background-image: url(../../img/menu-button-background.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
   cursor: pointer;
 
   @media (max-width: $tablet-width) {
