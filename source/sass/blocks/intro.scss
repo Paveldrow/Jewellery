@@ -1,0 +1,32 @@
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &--index {
+    min-height: 463px;
+    background-image: url(../../img/intro-index-desktop.jpg);
+    background-position: center;
+  }
+}
+
+.intro__title {
+  margin: 0;
+  font-family: 'Cormorant Garamond';
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 59px;
+  letter-spacing: 0.03em;
+  color: $white;
+}
+
+.intro__subtitle {
+  margin: 0;
+  font-family: 'Cormorant Garamond';
+  font-style: italic;
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 49px;
+  color: $white;
+}

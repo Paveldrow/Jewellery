@@ -33,8 +33,9 @@ const searchInputClean = function () {
   };
 };
 
-menuToggle();
-
 window.addEventListener('resize', () => {
 searchInputClean();
 });
+
+menuToggle();
+

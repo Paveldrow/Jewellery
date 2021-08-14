@@ -1,9 +1,12 @@
 .page-footer {
+  background-color: $black;
+}
+
+.page-footer__wrapper {
   display: flex;
   flex-wrap: wrap;
   padding-top: 90px;
   padding-bottom: 90px;
-  background-color: $black;
   min-height: 120px;
 
   @media (max-width: $mobile-width) {

@@ -55,54 +55,171 @@
       </ul>
     </nav>
   </header>
-  <main class="page-main"></main>
-  <footer class="page-footer wrapper">
-    <div class="page-footer__sign-up sign-up">
-      <p class="sign-up__title">The good stuff in your inbox</p>
-      <p class="sign-up__subtitle">News and updates from CH. No spam, we promise.</p>
-      <form class="sigh-up__form" action="https://echo.htmlacademy.ru" method="POST">
-        <input type="text" placeholder="Your E-mail" aria-label="Enter e-mail for sign up" required="">
-        <button class="sigh-up__button-submit" type="submit">Sign Up
-          <svg class="sigh-up__button-icon" width="30" height="11">
-            <use xlink:href="./img/sprite_auto.svg#icon-arrow"></use>
-          </svg>
-        </button>
-      </form>
+  <main class="page-main">
+    <h1 class="visually-hidden">Main page Jewellery</h1>
+    <div class="intro intro--index block">
+      <p class="intro__title">Perfections</p>
+      <p class="intro__subtitle">made to be yours</p>
     </div>
-    <div class="page-footer__service service">
-      <p class="service__item"><a class="service__link" href="#">Ordering & Payment</a></p>
-      <p class="service__item"><a class="service__link" href="#">Terms & Conditions</a></p>
-      <p class="service__item"><a class="service__link" href="#">Returns & Exchanges</a></p>
-      <p class="service__item"><a class="service__link" href="#">Delivery</a></p>
+    <div class="wrapper">
+      <section class="slider block">
+        <h2 class="visually-hidden">Novelty slider</h2>
+        <p class="slider__title block-title">New in</p>
+        <a class="slider__shop-link block-link" href="#">Shop Now</a>
+        <ul class="slider__list">
+          <li class="slider__item product-card"><a class="product-card__link" href="#">
+              <img src="./img/slider-necklace-with-amethyst-desktop.jpg" width="270" height="284" alt="Necklace with amethyst photo">
+              <h3 class="product-card__title">Necklace with amethyst</h3>
+              <p class="product-card__price">$150</p>
+            </a></li>
+          <li class="slider__item product-card"><a class="product-card__link" href="#">
+              <img src="./img/slider-layered-choker-desktop.jpg" width="270" height="284" alt="Layered choker photo">
+              <h3 class="product-card__title">Layered сhoker</h3>
+              <p class="product-card__price">$115</p>
+            </a></li>
+          <li class="slider__item product-card"><a class="product-card__link" href="#">
+              <img src="./img/slider-gold-chain-desktop.jpg" width="270" height="284" alt="Gold chain photo">
+              <h3 class="product-card__title">Gold chain</h3>
+              <p class="product-card__price">$215</p>
+            </a></li>
+          <li class="slider__item product-card"><a class="product-card__link" href="#">
+              <img src="./img/slider-galaxy-earrings-desktop.jpg" width="270" height="284" alt="Galaxy earrings photo">
+              <h3 class="product-card__title">Galaxy earrings</h3>
+              <p class="product-card__price">$95</p>
+            </a></li>
+        </ul>
+        <ul class="pagination">
+          <li class="pagination__item"><a class="pagination__link pagination__link--current" href="#">1</a></li>
+          <li class="pagination__item"><a class="pagination__link" href="#">2</a></li>
+          <li class="pagination__item"><a class="pagination__link" href="#">3</a></li>
+        </ul>
+      </section>
+      <section class="blog block">
+        <h2 class="block-title">Blog</h2>
+        <p class="block-link">Read All</p>
+        <ul class="blog-list">
+          <li class="blog__item">
+            <div class="blog__card">
+              <time class="blog__time" datetime="2019-09-30">September 30, 2019</time>
+              <p class="blog__title">How to care for your jewellery</p>
+              <a class="blog__link" href="#">Read Article</a>
+            </div>
+          </li>
+          <li class="blog__item">
+            <div class="blog__card">
+              <time class="blog__time" datetime="2019-09-23">September 23, 2019</time>
+              <p class="blog__title">Power of crystals</p>
+              <a class="blog__link" href="#">Read Article</a>
+            </div>
+          </li>
+          <li class="blog__item">
+            <div class="blog__card">
+              <time class="blog__time" datetime="2019-09-16">September 16, 2019</time>
+              <p class="blog__title">AW 19 trends</p>
+              <a class="blog__link" href="#">Read Article</a>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <div class="faq block">
+        <h2 class="block-title">Frequently asked questions</h2>
+        <ul class="faq__list">
+          <li class="faq__item faq__item--open">
+            <p class="faq__question">What materials are the jewellery made of?</p>
+            <p class="faq__answer">Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and semiprecious stones and crystals.</p>
+          </li>
+          <li class="faq__item">
+            <p class="faq__question">Which countries do you deliver to?</p>
+            <p class="faq__answer">Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and semiprecious stones and crystals.</p>
+          </li>
+          <li class="faq__item">
+            <p class="faq__question">What are the payment methods?</p>
+            <p class="faq__answer">Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and semiprecious stones and crystals.</p>
+          </li>
+          <li class="faq__item">
+            <p class="faq__question">Can I return the jewellery if it didn’t fit me?</p>
+            <p class="faq__answer">Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and semiprecious stones and crystals.</p>
+          </li>
+        </ul>
+      </div>
+      <section class="gallery block">
+        <h3 class="block-title">@Chjewellery</h3>
+        <a class="block-link" href="#">Follow Us</a>
+        <ul class="gallery__list">
+          <li class="gallery__item">
+            <img class="gallery__image" src="./img/gallery-studs-desktop.jpg" width="230" height="230" alt="Studs photo">
+          </li>
+          <li class="gallery__item">
+            <img class="gallery__image" src="./img/gallery-pendants-desktop.jpg" width="230" height="150" alt="Pendants photo">
+          </li>
+          <li class="gallery__item">
+            <img class="gallery__image" src="./img/gallery-full-earrings-desktop.jpg" width="399" height="412" alt="Full earrings photo">
+          </li>
+          <li class="gallery__item">
+            <img src="./img/gallery-bracelets-desktop.jpg" width="230" height="230" alt="Bracelets photo">
+          </li>
+          <li class="gallery__item">
+            <img class="gallery__image" src="./img/gallery-chain-desktop.jpg" width="230" height="150" alt="Chain photo">
+          </li>
+          <li class="gallery__item">
+            <img class="gallery__image" src="./img/gallery-thin-earrings-desktop.jpg" width="230" height="230" alt="Thin earrings photo">
+          </li>
+          <li class="gallery__item">
+            <img class="gallery__image" src="./img/gallery-rings-desktop.jpg" width="230" height="150" alt="Rings photo">
+          </li>
+        </ul>
+      </section>
     </div>
-    <div class="page-footer__service service">
-      <p class="service__item"><a class="service__link" href="#">About CH</a></p>
-      <p class="service__item"><a class="service__link" href="#">Stores & Hours</a></p>
-      <p class="service__item"><a class="service__link" href="#">Jobs</a></p>
-      <p class="service__item"><a class="service__link" href="#">Contact Us</a></p>
+  </main>
+  <footer class="page-footer">
+    <div class="page-footer__wrapper wrapper">
+      <div class="page-footer__sign-up sign-up">
+        <p class="sign-up__title">The good stuff in your inbox</p>
+        <p class="sign-up__subtitle">News and updates from CH. No spam, we promise.</p>
+        <form class="sigh-up__form" action="https://echo.htmlacademy.ru" method="POST">
+          <input type="text" placeholder="Your E-mail" aria-label="Enter e-mail for sign up" required="">
+          <button class="sigh-up__button-submit" type="submit">Sign Up
+            <svg class="sigh-up__button-icon" width="30" height="11">
+              <use xlink:href="./img/sprite_auto.svg#icon-arrow"></use>
+            </svg>
+          </button>
+        </form>
+      </div>
+      <div class="page-footer__service service">
+        <p class="service__item"><a class="service__link" href="#">Ordering & Payment</a></p>
+        <p class="service__item"><a class="service__link" href="#">Terms & Conditions</a></p>
+        <p class="service__item"><a class="service__link" href="#">Returns & Exchanges</a></p>
+        <p class="service__item"><a class="service__link" href="#">Delivery</a></p>
+      </div>
+      <div class="page-footer__service service">
+        <p class="service__item"><a class="service__link" href="#">About CH</a></p>
+        <p class="service__item"><a class="service__link" href="#">Stores & Hours</a></p>
+        <p class="service__item"><a class="service__link" href="#">Jobs</a></p>
+        <p class="service__item"><a class="service__link" href="#">Contact Us</a></p>
+      </div>
+      <ul class="page-footer__social social">
+        <li class="social__item"><a class="social__link" href="#">
+            <svg class="social__icon" width="8" height="15">
+              <use xlink:href="./img/sprite_auto.svg#icon-facebook"></use>
+            </svg>
+            <span class="social__name">Facebook</span></a></li>
+        <li class="social__item"><a class="social__link" href="#">
+            <svg class="social__icon" width="15" height="15">
+              <use xlink:href="./img/sprite_auto.svg#icon-instagram"></use>
+            </svg>
+            <span class="social__name">Instagram</span></a></li>
+        <li class="social__item"><a class="social__link" href="#">
+            <svg class="social__icon" width="16" height="15">
+              <use xlink:href="./img/sprite_auto.svg#icon-pinterest"></use>
+            </svg>
+            <span class="social__name">Pinterest</span></a></li>
+        <li class="social__item"><a class="social__link" href="#">
+            <svg class="social__icon" width="15" height="13">
+              <use xlink:href="./img/sprite_auto.svg#icon-twitter"></use>
+            </svg>
+            <span class="social__name">Twitter</span></a></li>
+      </ul>
     </div>
-    <ul class="page-footer__social social">
-      <li class="social__item"><a class="social__link" href="#">
-          <svg class="social__icon" width="8" height="15">
-            <use xlink:href="./img/sprite_auto.svg#icon-facebook"></use>
-          </svg>
-          <span class="social__name">Facebook</span></a></li>
-      <li class="social__item"><a class="social__link" href="#">
-          <svg class="social__icon" width="15" height="15">
-            <use xlink:href="./img/sprite_auto.svg#icon-instagram"></use>
-          </svg>
-          <span class="social__name">Instagram</span></a></li>
-      <li class="social__item"><a class="social__link" href="#">
-          <svg class="social__icon" width="16" height="15">
-            <use xlink:href="./img/sprite_auto.svg#icon-pinterest"></use>
-          </svg>
-          <span class="social__name">Pinterest</span></a></li>
-      <li class="social__item"><a class="social__link" href="#">
-          <svg class="social__icon" width="15" height="13">
-            <use xlink:href="./img/sprite_auto.svg#icon-twitter"></use>
-          </svg>
-          <span class="social__name">Twitter</span></a></li>
-    </ul>
   </footer>
   <script src="js/script.js"></script>
 </body>
