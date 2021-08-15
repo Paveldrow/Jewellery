@@ -14,6 +14,8 @@
 //   }
 // });
 
+const faqItem = document.querySelectorAll('.faq__item');
+
 const menuToggle = function () {
   const pageHeader = document.querySelector('.page-header');
   const buttonMenu = document.querySelector('.page-header__button-menu');
@@ -34,8 +36,17 @@ const searchInputClean = function () {
 };
 
 window.addEventListener('resize', () => {
-searchInputClean();
+  searchInputClean();
 });
 
-menuToggle();
+const openingAccordeon = function (items) {
+  items.forEach((element) => {
+    element.addEventListener('click', () => {
+      element.classList.toggle('faq__item--open');
+    });
+  });
 
+}
+
+menuToggle();
+openingAccordeon(faqItem);

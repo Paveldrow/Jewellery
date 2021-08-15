@@ -7,4 +7,8 @@
   font-size: 34px;
   line-height: 44px;
   color: $dark;
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 50px;
+  }
 }

@@ -1,13 +1,45 @@
 .pagination {
-  display: flex;
+  display: none;
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
   list-style: none;
+
+  &--desktop {
+    @media (min-width: $desktop-width) {
+      display: flex;
+    }
+  }
+
+  &--tablet {
+    @media (max-width: $tablet-width) {
+      display: flex;
+    }
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  &--mobile {
+    @media (max-width: $mobile-width) {
+      display: block;
+     text-align: center;
+    }
+  }
 }
 
 .pagination__item {
   margin-right: 15px;
+
+  &--mobile-current {
+    margin-right: 10px;
+  }
+
+  &--mobile-amount {
+    margin-left: 10px;
+    margin-right: 0;
+  }
 }
 
 .pagination__link {

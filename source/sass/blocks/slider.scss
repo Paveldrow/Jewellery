@@ -6,4 +6,20 @@
   margin-right: auto;
   padding: 0;
   list-style: none;
+
+  @media (max-width: $tablet-width) {
+    justify-content: center;
+  }
+}
+
+.slider__item {
+  @media (max-width: $tablet-width) {
+    margin-right: 30px;
+  }
+
+  &--desktop-only {
+    @media (max-width: $tablet-width) {
+      display: none;
+    }
+  }
 }

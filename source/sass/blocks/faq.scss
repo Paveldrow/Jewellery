@@ -5,6 +5,11 @@
   padding: 0;
   list-style: none;
   border: 1px solid $accent-color;
+
+  @media (max-width: $tablet-width) {
+    margin-right: 0;
+    margin-left: 0;
+  }
 }
 
 .faq__item {
@@ -14,6 +19,7 @@
   padding-right: 38px;
   padding-bottom: 49px;
   border-bottom: 1px solid $accent-color;
+  cursor: pointer;
 
   &:last-child {
     border-bottom: none;
@@ -38,12 +44,20 @@
   &--open .faq__answer {
     display: block;
   }
+
+  @media (max-width: $mobile-width) {
+    padding-left: 25px;
+  }
 }
 
 .faq__question {
   margin: 0;
   font-style: 18px;
   line-height: 23px;
+
+  @media (max-width: $mobile-width) {
+    padding-right: 103px;
+  }
 }
 
 .faq__answer {

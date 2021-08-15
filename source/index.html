@@ -10,8 +10,8 @@
 </head>
 
 <body class="page__body">
-  <header class="page-header wrapper">
-    <nav class="page-header__main-nav">
+  <header class="page-header">
+    <nav class="page-header__main-nav wrapper">
       <button class="page-header__button-menu"><span class="visually-hidden">Меню</span>
         <svg class="page-header__icon-menu" width="27" height="18">
           <use xlink:href="./img/sprite_auto.svg#icon-menu-button"></use>
@@ -68,31 +68,60 @@
         <a class="slider__shop-link block-link" href="#">Shop Now</a>
         <ul class="slider__list">
           <li class="slider__item product-card"><a class="product-card__link" href="#">
-              <img src="./img/slider-necklace-with-amethyst-desktop.jpg" width="270" height="284" alt="Necklace with amethyst photo">
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)" srcset="./img/slider-necklace-with-amethyst-mobile.webp 1x, ./img/slider-necklace-with-amethyst-mobile@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1023px)" srcset="./img/slider-necklace-with-amethyst-tablet.webp 1x, ./img/slider-necklace-with-amethyst-tablet@2x.webp 2x">
+                <source type="image/webp" srcset=" ./img/slider-necklace-with-amethyst-desktop.webp 1x, ./img/slider-necklace-with-amethyst-desktop@2x.webp 2x">
+                <source media="(max-width: 767px)" srcset="./img/slider-necklace-with-amethyst-mobile.jpg 1x, ./img/slider-necklace-with-amethyst-mobile@2x.jpg 2x">
+                <source media="(max-width: 1023px)" srcset="./img/slider-necklace-with-amethyst-tablet.jpg 1x, ./img/slider-necklace-with-amethyst-tablet@2x.jpg 2x">
+                <img class="slider__image" src="./img/slider-necklace-with-amethyst-desktop.jpg" srcset="./img/slider-necklace-with-amethyst-desktop@2x.jpg 2x" width="270" height="284" alt="Necklace with amethyst photo">
+              </picture>
               <h3 class="product-card__title">Necklace with amethyst</h3>
               <p class="product-card__price">$150</p>
             </a></li>
           <li class="slider__item product-card"><a class="product-card__link" href="#">
-              <img src="./img/slider-layered-choker-desktop.jpg" width="270" height="284" alt="Layered choker photo">
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)" srcset="./img/slider-layered-choker-mobile.webp 1x, ./img/slider-layered-choker-mobile@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1023px)" srcset="./img/slider-layered-choker-tablet.webp 1x, ./img/slider-layered-choker-tablet@2x.webp 2x">
+                <source type="image/webp" srcset=" ./img/slider-layered-choker-desktop.webp 1x, ./img/slider-layered-choker-desktop@2x.webp 2x">
+                <source media="(max-width: 767px)" srcset="./img/slider-layered-choker-mobile.jpg 1x, ./img/slider-layered-choker-mobile@2x.jpg 2x">
+                <source media="(max-width: 1023px)" srcset="./img/slider-layered-choker-tablet.jpg 1x, ./img/slider-layered-choker-tablet@2x.jpg 2x">
+                <img src="./img/slider-layered-choker-desktop.jpg" srcset="./img/slider-layered-choker-desktop@2x.jpg 2x" width="270" height="284" alt="Layered choker photo">
+              </picture>
               <h3 class="product-card__title">Layered сhoker</h3>
               <p class="product-card__price">$115</p>
             </a></li>
-          <li class="slider__item product-card"><a class="product-card__link" href="#">
-              <img src="./img/slider-gold-chain-desktop.jpg" width="270" height="284" alt="Gold chain photo">
+          <li class="slider__item slider__item--desktop-only product-card"><a class="product-card__link" href="#">
+              <picture>
+                <source type="image/webp" srcset=" ./img/slider-gold-chain-desktop.webp 1x, ./img/slider-gold-chain-desktop@2x.webp 2x">
+                <img src="./img/slider-gold-chain-desktop.jpg" srcset="./img/slider-gold-chain-desktop@2x.jpg 2x" width="270" height="284" alt="Gold chain photo">
+              </picture>
               <h3 class="product-card__title">Gold chain</h3>
               <p class="product-card__price">$215</p>
             </a></li>
-          <li class="slider__item product-card"><a class="product-card__link" href="#">
-              <img src="./img/slider-galaxy-earrings-desktop.jpg" width="270" height="284" alt="Galaxy earrings photo">
+          <li class="slider__item slider__item--desktop-only product-card"><a class="product-card__link" href="#">
+              <picture>
+                <source type="image/webp" srcset=" ./img/slider-galaxy-earrings-desktop.webp 1x, ./img/slider-galaxy-earrings-desktop@2x.webp 2x">
+                <img src="./img/slider-galaxy-earrings-desktop.jpg" srcset="./img/slider-galaxy-earrings-desktop@2x.jpg 2x" width="270" height="284" alt="Galaxy earrings photo">
+              </picture>
               <h3 class="product-card__title">Galaxy earrings</h3>
               <p class="product-card__price">$95</p>
             </a></li>
         </ul>
-        <ul class="pagination">
+        <ul class="pagination pagination--desktop">
           <li class="pagination__item"><a class="pagination__link pagination__link--current" href="#">1</a></li>
           <li class="pagination__item"><a class="pagination__link" href="#">2</a></li>
           <li class="pagination__item"><a class="pagination__link" href="#">3</a></li>
         </ul>
+        <ul class="pagination pagination--tablet">
+          <li class="pagination__item"><a class="pagination__link pagination__link--current" href="#">1</a></li>
+          <li class="pagination__item"><a class="pagination__link" href="#">2</a></li>
+          <li class="pagination__item"><a class="pagination__link" href="#">3</a></li>
+          <li class="pagination__item"><a class="pagination__link" href="#">4</a></li>
+          <li class="pagination__item"><a class="pagination__link" href="#">5</a></li>
+          <li class="pagination__item"><a class="pagination__link" href="#">6</a></li>
+        </ul>
+        <p class="pagination pagination--mobile"><span class="pagination__item pagination__item--mobile-current">1</span>of<span class="pagination__item pagination__item--mobile-amount">6</span></p>
       </section>
       <section class="blog block">
         <h2 class="block-title">Blog</h2>
@@ -124,7 +153,7 @@
       <div class="faq block">
         <h2 class="block-title">Frequently asked questions</h2>
         <ul class="faq__list">
-          <li class="faq__item faq__item--open">
+          <li class="faq__item">
             <p class="faq__question">What materials are the jewellery made of?</p>
             <p class="faq__answer">Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and semiprecious stones and crystals.</p>
           </li>
@@ -147,25 +176,63 @@
         <a class="block-link" href="#">Follow Us</a>
         <ul class="gallery__list">
           <li class="gallery__item">
-            <img class="gallery__image" src="./img/gallery-studs-desktop.jpg" width="230" height="230" alt="Studs photo">
+            <picture>
+              <source type="image/webp" media="(max-width: 1023px)" srcset="./img/gallery-studs-tablet.webp 1x, ./img/gallery-studs-tablet@2x.webp 2x">
+              <source type="image/webp" srcset=" ./img/gallery-studs-desktop.webp 1x, ./img/gallery-studs-desktop@2x.webp 2x">
+              <source media="(max-width: 1023px)" srcset="./img/gallery-studs-tablet.jpg 1x, ./img/gallery-studs-tablet@2x.jpg 2x">
+              <img class="gallery__image" src="./img/gallery-studs-desktop.jpg" srcset="./img/gallery-studs-desktop@2x.jpg 2x" width="230" height="230" alt="Studs photo">
+            </picture>
           </li>
           <li class="gallery__item">
-            <img class="gallery__image" src="./img/gallery-pendants-desktop.jpg" width="230" height="150" alt="Pendants photo">
+            <picture>
+              <source type="image/webp" media="(max-width: 1023px)" srcset="./img/gallery-pendants-tablet.webp 1x, ./img/gallery-pendants-tablet@2x.webp 2x">
+              <source type="image/webp" srcset=" ./img/gallery-pendants-desktop.webp 1x, ./img/gallery-pendants-desktop@2x.webp 2x">
+              <source media="(max-width: 1023px)" srcset="./img/gallery-pendants-tablet.jpg 1x, ./img/gallery-pendants-tablet@2x.jpg 2x">
+              <img class="gallery__image" src="./img/gallery-pendants-desktop.jpg" srcset="./img/gallery-pendants-desktop@2x.jpg 2x" width="230" height="150" alt="Pendants photo">
+            </picture>
           </li>
           <li class="gallery__item">
-            <img class="gallery__image" src="./img/gallery-full-earrings-desktop.jpg" width="399" height="412" alt="Full earrings photo">
+            <picture>
+              <source type="image/webp" media="(max-width: 767px)" srcset="./img/gallery-full-earrings-mobile.webp 1x, ./img/gallery-full-earrings-mobile@2x.webp 2x">
+              <source type="image/webp" media="(max-width: 1023px)" srcset="./img/gallery-full-earrings-tablet.webp 1x, ./img/gallery-full-earrings-tablet@2x.webp 2x">
+              <source type="image/webp" srcset=" ./img/gallery-full-earrings-desktop.webp 1x, ./img/gallery-full-earrings-desktop@2x.webp 2x">
+              <source media="(max-width: 767px)" srcset="./img/slider-full-earrings-mobile.jpg 1x, ./img/slider-full-earrings-mobile@2x.jpg 2x">
+              <source media="(max-width: 1023px)" srcset="./img/gallery-full-earrings-tablet.jpg 1x, ./img/gallery-full-earrings-tablet@2x.jpg 2x">
+              <img class="gallery__image" src="./img/gallery-full-earrings-desktop.jpg" srcset="./img/gallery-full-earrings-desktop@2x.jpg 2x" width="399" height="412" alt="Full earrings photo">
+            </picture>
           </li>
           <li class="gallery__item">
-            <img src="./img/gallery-bracelets-desktop.jpg" width="230" height="230" alt="Bracelets photo">
+            <picture>
+              <source type="image/webp" media="(max-width: 1023px)" srcset="./img/gallery-bracelets-tablet.webp 1x, ./img/gallery-bracelets-tablet@2x.webp 2x">
+              <source type="image/webp" srcset=" ./img/gallery-bracelets-desktop.webp 1x, ./img/gallery-bracelets-desktop@2x.webp 2x">
+              <source media="(max-width: 1023px)" srcset="./img/gallery-bracelets-tablet.jpg 1x, ./img/gallery-bracelets-tablet@2x.jpg 2x">
+              <img src="./img/gallery-bracelets-desktop.jpg" srcset="./img/gallery-bracelets-desktop@2x.jpg 2x" width="230" height="230" alt="Bracelets photo">
+            </picture>
           </li>
           <li class="gallery__item">
-            <img class="gallery__image" src="./img/gallery-chain-desktop.jpg" width="230" height="150" alt="Chain photo">
+            <picture>
+              <source type="image/webp" media="(max-width: 1023px)" srcset="./img/gallery-chain-tablet.webp 1x, ./img/gallery-chain-tablet@2x.webp 2x">
+              <source type="image/webp" srcset=" ./img/gallery-chain-desktop.webp 1x, ./img/gallery-chain-desktop@2x.webp 2x">
+              <source media="(max-width: 1023px)" srcset="./img/gallery-chain-tablet.jpg 1x, ./img/gallery-chain-tablet@2x.jpg 2x">
+              <img class="gallery__image" src="./img/gallery-chain-desktop.jpg" srcset="./img/gallery-chain-desktop@2x.jpg 2x" width="230" height="150" alt="Chain photo">
+            </picture>
           </li>
           <li class="gallery__item">
-            <img class="gallery__image" src="./img/gallery-thin-earrings-desktop.jpg" width="230" height="230" alt="Thin earrings photo">
+            <picture>
+              <source type="image/webp" media="(max-width: 1023px)" srcset="./img/gallery-thin-earrings-tablet.webp 1x, ./img/gallery-thin-earrings-tablet@2x.webp 2x">
+              <source type="image/webp" srcset=" ./img/gallery-thin-earrings-desktop.webp 1x, ./img/gallery-thin-earrings-desktop@2x.webp 2x">
+              <source media="(max-width: 1023px)" srcset="./img/gallery-thin-earrings-tablet.jpg 1x, ./img/gallery-thin-earrings-tablet@2x.jpg 2x">
+              <img class="gallery__image" src="./img/gallery-thin-earrings-desktop.jpg" srcset="./img/gallery-thin-earrings-desktop@2x.jpg 2x" width="230" height="230" alt="Thin earrings photo">
+            </picture>
           </li>
           <li class="gallery__item">
-            <img class="gallery__image" src="./img/gallery-rings-desktop.jpg" width="230" height="150" alt="Rings photo">
+            <picture>
+              <source type="image/webp" media="(max-width: 1023px)" srcset="./img/gallery-rings-tablet.webp 1x, ./img/gallery-rings-tablet@2x.webp 2x">
+
+              <source type="image/webp" srcset=" ./img/gallery-rings-desktop.webp 1x, ./img/gallery-rings-desktop@2x.webp 2x">
+              <source media="(max-width: 1023px)" srcset="./img/gallery-rings-tablet.jpg 1x, ./img/gallery-rings-tablet@2x.jpg 2x">
+              <img class="gallery__image" src="./img/gallery-rings-desktop.jpg" srcset="./img/gallery-rings-desktop@2x.jpg 2x" width="230" height="150" alt="Rings photo">
+            </picture>
           </li>
         </ul>
       </section>
