@@ -1,11 +1,26 @@
-.social  {
-  margin: 0;
+.social {
+  margin-top: 0;
+  margin-bottom: 0;
   padding: 0;
   list-style: none;
+  flex-shrink: 1;
+
+  @media (max-width: $mobile-width) {
+    display: flex;
+  }
 }
 
 .social__item {
+  width: 115px;
   margin-bottom: 10px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 21px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: auto;
+  }
 }
 
 .social__link {
@@ -15,6 +30,18 @@
 .social__icon {
   width: 15px;
   height: 15px;
+  margin-right: 10px;
   fill: $white;
 
+  @media (max-width: $mobile-width) {
+    width: 20px;
+    height: 21px;
+    margin-right: 29px;
+  }
+}
+
+.social__name {
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
 }

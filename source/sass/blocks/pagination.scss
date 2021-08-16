@@ -1,8 +1,10 @@
 .pagination {
   display: none;
   justify-content: center;
+  margin: 0;
   margin-left: auto;
   margin-right: auto;
+  padding: 0;
   list-style: none;
 
   &--desktop {
@@ -16,7 +18,7 @@
       display: flex;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       display: none;
     }
   }
@@ -30,7 +32,15 @@
 }
 
 .pagination__item {
-  margin-right: 15px;
+  margin-right: 12px;
+
+  @media (max-width: $tablet-width) {
+    margin-right: 13px;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
 
   &--mobile-current {
     margin-right: 10px;

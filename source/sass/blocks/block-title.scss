@@ -1,14 +1,11 @@
 .block-title {
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: 19px;
   text-align: center;
   font-family: 'Cormorant Garamond';
   font-weight: 700;
   font-size: 34px;
   line-height: 44px;
+  letter-spacing: 0.03em;
   color: $dark;
-
-  @media (max-width: $mobile-width) {
-    margin-bottom: 50px;
-  }
 }

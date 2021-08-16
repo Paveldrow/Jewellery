@@ -1,8 +1,8 @@
 .intro {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  box-sizing: border-box;
+  margin-bottom: 120px;
+  padding-top: 181px;
+  text-align: center;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -21,6 +21,7 @@
 
 .intro--index {
   @media (max-width: $tablet-width) {
+    margin-bottom: 70px;
     background-image: url('../img/intro-index-tablet.jpg');
     background-image: -webkit-image-set(url('../img/intro-index-tablet.webp') 1x);
 
@@ -31,6 +32,8 @@
   }
 
   @media (max-width: $mobile-width) {
+    padding-top: 189px;
+    margin-bottom: 60px;
     background-image: url('../img/intro-index-tablet.jpg');
     background-image: -webkit-image-set(url('../img/intro-index-mobile.webp') 1x);
 
@@ -46,8 +49,9 @@
   font-family: 'Cormorant Garamond';
   font-weight: 700;
   font-size: 45px;
-  line-height: 59px;
+  line-height: 57px;
   letter-spacing: 0.03em;
+  text-transform: uppercase;
   color: $white;
 
   @media (max-width: $mobile-width) {
@@ -62,10 +66,11 @@
   font-style: italic;
   font-weight: 400;
   font-size: 38px;
-  line-height: 49px;
+  line-height: 39px;
   color: $white;
 
   @media (max-width: $mobile-width) {
+    margin-top: -7px;
     font-size: 34px;
     line-height: 44px;
   }

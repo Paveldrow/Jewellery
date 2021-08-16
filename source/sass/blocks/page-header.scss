@@ -1,8 +1,14 @@
 .page-header {
   padding-top: 30px;
+  padding-bottom: 18px;
+
+  @media (max-width: $tablet-width) {
+    padding-bottom: 12px;
+  }
 
   @media (max-width: $mobile-width) {
     padding-top: 20px;
+    padding-bottom: 2px;
   }
 
   &--open-menu {
@@ -10,7 +16,7 @@
     padding-bottom: 75px;
 
     @media (max-width: $mobile-width) {
-padding-bottom: 44px;
+      padding-bottom: 44px;
     }
   }
 }
@@ -71,7 +77,7 @@ padding-bottom: 44px;
 
 .page-header--open-menu .page-header__search-form {
   @media (max-width: $tablet-width) {
-  display: flex
+    display: flex
   }
 }
 

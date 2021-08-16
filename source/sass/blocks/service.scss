@@ -1,14 +1,34 @@
 .service {
   margin-top: 0;
-  margin-bottom: 0;
-  margin-left: 0;
-  padding: 0;
   list-style: none;
+}
+
+.service__column {
+  padding-right: 13px;
+
+  @media (max-width: $tablet-width) {
+    margin-right: 87px;
+    padding: 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-right: 0;
+    margin-bottom: 41px;
+  }
+
+  &:last-child {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
 }
 
 .service__item {
   margin: 0;
   margin-bottom: 30px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 21px;
+  }
 
   &:last-child {
     margin-bottom: 0;
