@@ -1,6 +1,10 @@
 .product-card {
   text-align: center;
-}
+
+    @media (max-width: $mobile-width) {
+      width: 130px;
+    }
+  }
 
 .product-card__title {
   margin: 0;
@@ -18,3 +22,17 @@
   color: $dark;
 }
 
+.product-card__image {
+  width: 270px;
+  height: 272px;
+
+  @media (max-width: $tablet-width) {
+   width: 206px;
+   height: 208px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 130px;
+    height: 136px;
+  }
+}
