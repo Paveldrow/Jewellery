@@ -1,0 +1,252 @@
+.filter {
+  background-color: $white;
+
+  &--open {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-top: 27px;
+    overflow: scroll;
+  }
+}
+
+.filter__form {
+  position: relative;
+  width: 250px;
+  margin-right: 50px;
+  padding-bottom: 40px;
+
+  @media (max-width: $tablet-width) {
+    display: none;
+    width: 423px;
+    box-shadow: 0px 5px 32px rgba(219, 213, 208, 0.24);
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 270px;
+    margin-left: 25px;
+  }
+}
+
+.filter--open .filter__form {
+  display: block;
+}
+
+.filter__field {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  padding-top: 28px;
+  padding-bottom: 28px;
+  padding-left: 25px;
+  border: none;
+  border: 1px solid $accent-color;
+  border-bottom: none;
+  cursor: pointer;
+
+  &:last-of-type {
+    border-bottom: 1px solid $accent-color;
+    margin-bottom: 35px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    border: none;
+    border-bottom: 1px solid $accent-color;
+  }
+
+  &::after {
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    content: '';
+    width: 16px;
+    height: 9px;
+    background-image: url(../../img/icon-arrow-faq.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 0.1s;
+  }
+}
+
+.filter__field--close {
+  &::after {
+    transform: rotate(180deg);
+  }
+}
+
+.filter__field--close .filter__list {
+  display: none;
+}
+
+.filter__list-title {
+  margin: 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.filter__list {
+  margin: 0;
+  margin-top: 30px;
+  margin-left: 10px;
+  padding: 0;
+  list-style: none;
+
+}
+
+.filter__item {
+  margin-bottom: 15px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+label {
+  position: relative;
+  padding-left: 25px;
+}
+
+.filter__checkbox+label {
+  &::before {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    box-sizing: border-box;
+    display: block;
+    content: '';
+    width: 15px;
+    height: 15px;
+    border: 1px solid $accent-color;
+  }
+}
+
+.filter__checkbox:checked+label {
+  &::before {
+    background-color: $accent-color;
+  }
+}
+
+.filter__range {
+  width: 200px;
+}
+
+.filter__range-controls {
+  position: relative;
+  box-sizing: border-box;
+  height: 15px;
+  padding-top: 7px;
+}
+
+.filter__range-scale {
+  height: 1px;
+  background: $special-background;
+}
+
+.filter__range-bar {
+  width: 90px;
+  margin-left: 60px;
+  height: 1px;
+  background: $accent-color;
+}
+
+.filter__range-toggle {
+  position: absolute;
+  top: 0;
+  width: 15px;
+  height: 15px;
+  background-color: $accent-color;
+  border-radius: 50%;
+
+  &--min {
+    left: 45px;
+  }
+
+  &--max {
+    left: 150px;
+  }
+}
+
+.filter__price {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 38px;
+  margin-right: 25px;
+}
+
+.filter__button {
+  display: block;
+  box-sizing: border-box;
+  width: 250px;
+  height: 68px;
+  padding: 0;
+  border: none;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  cursor: pointer;
+  background-color: $accent-color;
+  color: $white;
+
+  @media (max-width: $tablet-width) {
+    width: 362px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 230px;
+  }
+
+  &--submit {
+    margin-bottom: 25px;
+  }
+
+  &--reset {
+    background-color: $white;
+    border: 1px solid $accent-color;
+    color: $dark;
+  }
+
+  &--open-filter {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 678px;
+    margin-bottom: 50px;
+
+    @media (max-width: $tablet-width) {
+      display: flex;
+    }
+
+    @media (max-width: $mobile-width) {
+      width: 290px;
+    }
+  }
+
+  &--close {
+    position: absolute;
+    top: -16px;
+    right: -16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: $black;
+  }
+}
+
+.filter__icon-close {
+  fill: $white;
+}

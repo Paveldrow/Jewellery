@@ -45,8 +45,39 @@ const openingAccordeon = function (items) {
       element.classList.toggle('faq__item--open');
     });
   });
-
 }
 
 menuToggle();
 openingAccordeon(faqItem);
+
+const openFilterButton = document.querySelector('.filter__button--open-filter');
+const closeFilterButton = document.querySelector('.filter__button--close');
+const filter = document.querySelector('.filter');
+const filterItem = document.querySelectorAll('.filter__field');
+
+
+const openingFilterItem = function (items) {
+  items.forEach((element) => {
+    element.addEventListener('click', () => {
+      element.classList.toggle('filter__field--close');
+    });
+  });
+}
+
+const closeFilter = function () {
+  closeFilterButton.addEventListener('click', (evt) => {
+    evt.preventDefault();
+    filter.classList.remove('filter--open');
+  })
+}
+
+const openFilter = function () {
+  openFilterButton.addEventListener('click', (evt) => {
+    evt.preventDefault();
+    filter.classList.add('filter--open');
+    openingFilterItem(filterItem)
+    closeFilter();
+  })
+}
+
+openFilter();
