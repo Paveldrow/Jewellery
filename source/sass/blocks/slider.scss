@@ -66,8 +66,8 @@
   // display: block;
   margin: 0;
   margin-bottom: 16px;
-  // width: 270px;
-  // height: 284px;
+  // max-width: 270px;
+  // max-height: 284px;
 
   @media (max-width: $tablet-width) {
     width: 324px;
