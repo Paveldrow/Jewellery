@@ -53,4 +53,13 @@
     line-height: 36px;
     color: $white
   }
+
+  &:focus,
+  &:hover {
+    color: $light;
+  }
+
+  &:active {
+    color: darken($light, 20%);
+  }
 }

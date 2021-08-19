@@ -6,7 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Jewellery - Gold Necklace</title>
-  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="css/style.min.css" as="style" onload="this.rel='stylesheet'">
+  <link href="./fonts/Poppins-Bold.woff2" as="font" rel="preload" crossorigin="anonymous">
+  <link href="./fonts/Poppins-Medium.woff2" as="font" rel="preload" crossorigin="anonymous">
+  <link href="./fonts/Poppins-Regular.woff2" as="font" rel="preload" crossorigin="anonymous">
+  <link href="./fonts/Cormorant-Garamond-Bold.woff2" as="font" rel="preload" crossorigin="anonymous">
+  <link href="./fonts/Cormorant-Garamond-SemiBold.woff2" as="font" rel="preload" crossorigin="anonymous">
+  <link href="./fonts/Cormorant-Garamond-Medium-Italic.woff2" as="font" rel="preload" crossorigin="anonymous">
+  <link href="./fonts/Cormorant-Garamond-Regular-Italic.woff2" as="font" rel="preload" crossorigin="anonymous">
 </head>
 
 <body class="page__body">
@@ -250,6 +257,69 @@
       </ul>
     </div>
   </footer>
+  <div class="modal-cart">
+    <div class="modal-cart__block">
+      <button class="modal-cart__close-button"><span class="visually-hidden">Close</span>
+        <svg class="modal-cart__close-button-icon" width="14" height="14">
+          <use xlink:href="./img/sprite_auto.svg#icon-close-button"></use>
+        </svg>
+      </button>
+      <p class="modal-cart__title">The item was added to your cart</p>
+      <div class="modal-cart__product-info">
+        <picture>
+          <source type="image/webp" media="(max-width: 767px)" srcset="./img/modal-cart-image-mobile.webp 1x, ./img/modal-cart-image-mobile@2x.webp 2x">
+          <source type="image/webp" media="(max-width: 1023px)" srcset="./img/modal-cart-image-tablet.webp 1x, ./img/modal-cart-image-tablet@2x.webp 2x">
+          <source type="image/webp" srcset=" ./img/modal-cart-image-desktop.webp 1x, ./img/modal-cart-image-desktop@2x.webp 2x">
+          <source media="(max-width: 767px)" srcset="./img/modal-cart-image-mobile.jpg 1x, ./img/modal-cart-image-mobile@2x.jpg 2x">
+          <source media="(max-width: 1023px)" srcset="./img/modal-cart-image-tablet.jpg 1x, ./img/modal-cart-image-tablet@2x.jpg 2x">
+          <img class="modal-cart__image" src="./img/modal-cart-image-desktop.jpg" srcset="./img/modal-cart-image-desktop@2x.jpg 2x" width="84" height="79" alt="Gold Necklace in cart photo">
+        </picture>
+        <div class="modal-cart__property">
+          <p class="modal-cart__property-name">Gold Necklace </p>
+          <p class="modal-cart__property-price">$ 115</p>
+        </div>
+        <div class="modal-cart__amount">
+          <button class="modal-cart__amount-button modal-cart__amount-button--increase"><span class="visually-hidden">Increase</span>
+            <svg class="modal-cart__button-icon" width="14" height="14">
+              <use xlink:href="./img/sprite_auto.svg#icon-increase-button"></use>
+            </svg>
+          </button>
+          <p class="modal-cart__amount-sum">1</p>
+          <button class="modal-cart__amount-button modal-cart__amount-button--decrease"><span class="visually-hidden">Decrease</span>
+            <svg class="modal-cart__button-icon" width="14" height="2">
+              <use xlink:href="./img/sprite_auto.svg#icon-decrease-button"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="modal-cart__check">
+        <p class="modal-cart__check-amount">You have 1 item in the cart</p>
+        <p class="modal-cart__check-price">Cart subtotal: $ 115</p>
+      </div>
+      <div class="modal-cart__button-wrapper">
+        <button type="button" class="modal-cart__button modal-cart__button--continue">Continue shopping</button>
+        <button type="button" class="modal-cart__button modal-cart__button">Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-login">
+    <div class="modal-login__block">
+      <button class="modal-cart__close-button"><span class="visually-hidden">Close</span>
+        <svg class="modal-cart__close-button-icon" width="14" height="14">
+          <use xlink:href="./img/sprite_auto.svg#icon-close-button"></use>
+        </svg>
+      </button>
+      <form class="modal-login__form" action="https://echo.htmlacademy.ru" method="POST">
+        <h2 class="modal-login__title">Log In</h2>
+        <input type="text" placeholder="Your E-mail" aria-label="Site login" required>
+        <input type="text" placeholder="Password" aria-label="Site password" required>
+        <a class="modal-login__restore-password" href="#">Forgot your password?</a>
+        <button class="modal-login__login-button" type="submit">Login</button>
+        <p class="modal-login__sign-up">Don’t have an account? <a class="modal-login__sign-up-link" href="#">Sin Up</a></p>
+      </form>
+    </div>
+  </div>
   <script src="js/script.js"></script>
 </body>
 

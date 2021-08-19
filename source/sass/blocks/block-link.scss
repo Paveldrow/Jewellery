@@ -6,4 +6,14 @@
   padding-bottom: 4px;
   border-bottom: 1px solid $accent-color;
   color: $dark;
+  cursor: pointer;
+
+  &:focus,
+  &:hover {
+    color: $accent-color;
+  }
+
+  &:active {
+    color: $light;
+  }
 }

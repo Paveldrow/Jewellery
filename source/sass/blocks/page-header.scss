@@ -57,6 +57,18 @@
   stroke: $white;
 }
 
+.page-header__button-menu .page-header__icon-menu {
+
+  &:focus,
+  &:hover {
+    stroke: $light;
+  }
+
+  &:active {
+    stroke: darken($light, 20%);
+  }
+}
+
 .page-header__search-form {
   display: flex;
   margin-top: 9px;
@@ -98,6 +110,18 @@
 
 .page-header--open-menu .page-header__main-logo {
   fill: $white;
+}
+
+.page-header__index-link .page-header__main-logo {
+
+  &:focus,
+  &:hover {
+    fill: $black;
+  }
+
+  &:active {
+    fill: $light;
+  }
 }
 
 .page-header__user-nav {
