@@ -8,81 +8,9 @@
   }
 }
 
-.product__photo {
-  display: flex;
-  margin-right: 100px;
-
-  @media (max-width: $tablet-width) {
-    flex-direction: column;
-    margin-right: 40px;
-  }
-
-  @media (max-width: $mobile-width) {
-    margin-right: 0;
-  }
-}
-
-.product__photo-list {
-  margin: 0;
-  margin-right: 30px;
-  padding: 0;
-  list-style: none;
-
-  @media (max-width: $tablet-width) {
-    display: flex;
-    margin-right: 0;
-    order: 2;
-  }
-
-  @media (max-width: $mobile-width) {
-    display: none;
-  }
-}
-
-.product__photo-item {
-  margin-bottom: 30px;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
-
-  @media (max-width: $tablet-width) {
-    margin-bottom: 0;
-    margin-right: 14px;
-
-    &:last-child {
-      margin-bottom: 0;
-      margin-right: 0;
-    }
-  }
-}
-
-.product__photo-preview {
-  display: block;
-
-  @media (max-width: $tablet-width) {
-    width: 97px;
-    height: 129px;
-  }
-}
-
-.product__photo-full {
-  display: block;
-
-  @media (max-width: $tablet-width) {
-    width: 319px;
-    height: 286px;
-    margin-bottom: 14px;
-  }
-
-  @media (max-width: $tablet-width) {
-    min-width: 290px;
-    min-height: 260px;
-  }
-}
-
 .product__info {
   flex-grow: 1;
+  order: 1;
   max-width: 370px;
 }
 
@@ -174,5 +102,78 @@
     border: none;
     padding: 0;
     padding-left: 1em;
+  }
+}
+
+.product__photo {
+  display: flex;
+  margin-right: 100px;
+
+  @media (max-width: $tablet-width) {
+    flex-direction: column;
+    margin-right: 40px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-right: 0;
+  }
+}
+
+.product__photo-list {
+  margin: 0;
+  margin-right: 30px;
+  padding: 0;
+  list-style: none;
+
+  @media (max-width: $tablet-width) {
+    display: flex;
+    margin-right: 0;
+    order: 2;
+  }
+
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
+}
+
+.product__photo-item {
+  margin-bottom: 30px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 0;
+    margin-right: 14px;
+
+    &:last-child {
+      margin-bottom: 0;
+      margin-right: 0;
+    }
+  }
+}
+
+.product__photo-preview {
+  display: block;
+
+  @media (max-width: $tablet-width) {
+    width: 97px;
+    height: 129px;
+  }
+}
+
+.product__photo-full {
+  display: block;
+  
+  @media (max-width: $tablet-width) {
+    width: 319px;
+    height: 286px;
+    margin-bottom: 14px;
+  }
+
+  @media (max-width: $tablet-width) {
+    min-width: 290px;
+    min-height: 260px;
   }
 }

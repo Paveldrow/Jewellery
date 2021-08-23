@@ -6,17 +6,26 @@
   height: 100%;
   background-color: $white;
 
+  &--page {
+    display: block;
+    position: static;
+  }
+
   &--open {
-     display: block;
+    display: block;
   }
 }
 
+.modal-login--page .modal-login__block {
+position: static;
+}
+
 .modal-login__block {
-  position: fixed;
+  position: absolute;
   left: 0;
   right: 0;
+  top: 100px;
   max-width: 430px;
-  margin-top: 100px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 138px;
@@ -142,4 +151,20 @@
 
 .modal-login__sign-up-link {
   color: $dark;
+}
+
+.modal-login__close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 14px;
+  height: 14px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-login__close-button-icon {
+  fill: $black;
 }

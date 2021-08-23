@@ -217,22 +217,6 @@ label {
     color: $dark;
   }
 
-  &--open-filter {
-    display: none;
-    justify-content: center;
-    align-items: center;
-    width: 678px;
-    margin-bottom: 50px;
-
-    @media (max-width: $tablet-width) {
-      display: flex;
-    }
-
-    @media (max-width: $mobile-width) {
-      width: 290px;
-    }
-  }
-
   &--close {
     position: absolute;
     top: -16px;

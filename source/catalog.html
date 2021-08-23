@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Jewellery Catalog</title>
-  <link rel="preload" href="css/style.min.css" as="style" onload="this.rel='stylesheet'">
+  <link rel="stylesheet" href="css/style.min.css">
   <link href="./fonts/Poppins-Bold.woff2" as="font" rel="preload" crossorigin="anonymous">
   <link href="./fonts/Poppins-Medium.woff2" as="font" rel="preload" crossorigin="anonymous">
   <link href="./fonts/Poppins-Regular.woff2" as="font" rel="preload" crossorigin="anonymous">
@@ -39,7 +39,7 @@
         </svg>
       </a>
       <p class="page-header__user-nav page-header__user-nav--login user-nav">
-        <a class="user-nav__link" href="#">Login</a>
+        <a class="user-nav__link user-nav__link--login" href="#">Login</a>
       </p>
       <p class="page-header__user-nav page-header__user-nav--cart user-nav">
         <a class="user-nav__link" href="#"><span class="user-nav__cart-item">Cart<span class="user-nav__cart-sum">0</span></span>
@@ -146,8 +146,8 @@
           <button class="filter__button filter__button--reset" type="reset">Clear All</button>
         </form>
       </div>
-      <a class="filter__button filter__button--open-filter" href="#">Filter</a>
       <section class="page-main__card-catalog catalog">
+        <a class="catalog__filter-button catalog__filter-button--open-filter" href="#">Filter</a>
         <h2 class="visually-hidden">Catalog</h2>
         <ul class="catalog__list">
           <li class="product-card"><a class="product-card__link" href="product-card.html">
@@ -295,9 +295,9 @@
               <p class="product-card__price">$ 95</p>
             </a></li>
         </ul>
-        <div class="catalog__pagination-block">
+        <div class="catalog__pagination-block pagination">
           <button class="pagination__button pagination__button--back" type="button">Previous</button>
-          <ul class="pagination pagination--catalog">
+          <ul class="pagination__list pagination__list--catalog">
             <li class="pagination__item"><a class="pagination__link pagination__link--current" href="#">1</a></li>
             <li class="pagination__item"><a class="pagination__link" href="#">2</a></li>
             <li class="pagination__item"><a class="pagination__link" href="#">3</a></li>
@@ -315,10 +315,10 @@
       <div class="page-footer__sign-up sign-up">
         <p class="sign-up__title">The good stuff in your inbox</p>
         <p class="sign-up__subtitle">News and updates from CH. No spam, we promise.</p>
-        <form class="sigh-up__form" action="https://echo.htmlacademy.ru" method="POST">
+        <form class="sign-up__form" action="https://echo.htmlacademy.ru" method="POST">
           <input type="text" placeholder="Your E-mail" aria-label="Enter e-mail for sign up" required>
-          <button class="sigh-up__button-submit" type="submit">Sign Up
-            <svg class="sigh-up__button-icon" width="30" height="11">
+          <button class="sign-up__button-submit" type="submit">Sign Up
+            <svg class="sign-up__button-icon" width="30" height="11">
               <use xlink:href="./img/sprite_auto.svg#icon-arrow"></use>
             </svg>
           </button>
@@ -363,55 +363,10 @@
       </ul>
     </div>
   </footer>
-  <div class="modal-cart">
-    <div class="modal-cart__block">
-      <button class="modal-cart__close-button"><span class="visually-hidden">Close</span>
-        <svg class="modal-cart__close-button-icon" width="14" height="14">
-          <use xlink:href="./img/sprite_auto.svg#icon-close-button"></use>
-        </svg>
-      </button>
-      <p class="modal-cart__title">The item was added to your cart</p>
-      <div class="modal-cart__product-info">
-        <picture>
-          <source type="image/webp" media="(max-width: 767px)" srcset="./img/modal-cart-image-mobile.webp 1x, ./img/modal-cart-image-mobile@2x.webp 2x">
-          <source type="image/webp" media="(max-width: 1023px)" srcset="./img/modal-cart-image-tablet.webp 1x, ./img/modal-cart-image-tablet@2x.webp 2x">
-          <source type="image/webp" srcset=" ./img/modal-cart-image-desktop.webp 1x, ./img/modal-cart-image-desktop@2x.webp 2x">
-          <source media="(max-width: 767px)" srcset="./img/modal-cart-image-mobile.jpg 1x, ./img/modal-cart-image-mobile@2x.jpg 2x">
-          <source media="(max-width: 1023px)" srcset="./img/modal-cart-image-tablet.jpg 1x, ./img/modal-cart-image-tablet@2x.jpg 2x">
-          <img class="modal-cart__image" src="./img/modal-cart-image-desktop.jpg" srcset="./img/modal-cart-image-desktop@2x.jpg 2x" width="84" height="79" alt="Gold Necklace in cart photo">
-        </picture>
-        <div class="modal-cart__property">
-          <p class="modal-cart__property-name">Gold Necklace </p>
-          <p class="modal-cart__property-price">$ 115</p>
-        </div>
-        <div class="modal-cart__amount">
-          <button class="modal-cart__amount-button modal-cart__amount-button--increase"><span class="visually-hidden">Increase</span>
-            <svg class="modal-cart__button-icon" width="14" height="14">
-              <use xlink:href="./img/sprite_auto.svg#icon-increase-button"></use>
-            </svg>
-          </button>
-          <p class="modal-cart__amount-sum">1</p>
-          <button class="modal-cart__amount-button modal-cart__amount-button--decrease"><span class="visually-hidden">Decrease</span>
-            <svg class="modal-cart__button-icon" width="14" height="2">
-              <use xlink:href="./img/sprite_auto.svg#icon-decrease-button"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
-      <div class="modal-cart__check">
-        <p class="modal-cart__check-amount">You have 1 item in the cart</p>
-        <p class="modal-cart__check-price">Cart subtotal: $ 115</p>
-      </div>
-      <div class="modal-cart__button-wrapper">
-        <button type="button" class="modal-cart__button modal-cart__button--continue">Continue shopping</button>
-        <button type="button" class="modal-cart__button modal-cart__button">Checkout</button>
-      </div>
-    </div>
-  </div>
-  <div class="modal-login">
+  <section class="modal-login">
     <div class="modal-login__block">
-      <button class="modal-cart__close-button"><span class="visually-hidden">Close</span>
-        <svg class="modal-cart__close-button-icon" width="14" height="14">
+      <button class="modal-login__close-button"><span class="visually-hidden">Close</span>
+        <svg class="modal-login__close-button-icon" width="14" height="14">
           <use xlink:href="./img/sprite_auto.svg#icon-close-button"></use>
         </svg>
       </button>
@@ -424,8 +379,8 @@
         <p class="modal-login__sign-up">Don’t have an account? <a class="modal-login__sign-up-link" href="#">Sin Up</a></p>
       </form>
     </div>
-  </div>
-  <script src="js/script.js"></script>
+  </section>
+  <script src="js/script.min.js"></script>
 </body>
 
 </html>
