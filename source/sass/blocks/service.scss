@@ -1,6 +1,10 @@
 .service {
-  margin-top: 0;
+  margin-top: 6px;
   list-style: none;
+
+  @media (max-width: $tablet-width) {
+    margin-top: 0;
+  }
 }
 
 .service__column {
@@ -8,7 +12,7 @@
 
   @media (max-width: $tablet-width) {
     margin-right: 87px;
-    padding: 0;
+    padding: 0
   }
 
   @media (max-width: $mobile-width) {
@@ -24,7 +28,7 @@
 
 .service__item {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 21px;
 
   @media (max-width: $tablet-width) {
     margin-bottom: 21px;

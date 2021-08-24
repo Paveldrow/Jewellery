@@ -11,63 +11,89 @@
 }
 
 .catalog__list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, auto));
+  column-gap: 30px;
   margin: 0;
-  margin-bottom: 40px;
   padding: 0;
   list-style: none;
+
+  @media (max-width: $mobile-width) {
+    grid-template-columns: repeat(2, minmax(0, auto));
+  }
+}
+
+.catalog__pagination-wrapper {
+  border-top: 1px solid $border;
+
 }
 
 .catalog__pagination-block {
   position: relative;
   display: flex;
   justify-content: space-between;
-  max-width: 870px;
   margin-left: auto;
+  margin-right: auto;
+  padding-left: 398px;
+  padding-top: 35px;
+  margin-bottom: 75px;
+
+  @media (max-width: $tablet-width) {
+    padding-left: 45px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-left: 15px;
+    padding-top: 15px;
+    margin-bottom: 65px;
+  }
+}
+
+.pagination__button {
   padding: 0;
-  padding-top: 40px;
+
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
 }
 
 
 .catalog__filter-button {
-   display: flex;
-box-sizing: border-box;
-width: 250px;
-height: 68px;
-padding: 0;
-border: none;
-font-family: 'Poppins';
-font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 21px;
-cursor: pointer;
-background-color: $accent-color;
-color: $white;
-
-@media (max-width: $tablet-width) {
-  width: 362px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-
-
-&--open-filter {
-  display: none;
-  justify-content: center;
-  align-items: center;
-  width: 678px;
-  margin-bottom: 50px;
+  display: flex;
+  box-sizing: border-box;
+  width: 250px;
+  height: 68px;
+  padding: 0;
+  border: none;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  cursor: pointer;
+  background-color: $accent-color;
+  color: $white;
 
   @media (max-width: $tablet-width) {
-    display: flex;
+    width: 362px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  @media (max-width: $mobile-width) {
-    width: 290px;
+  &--open-filter {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 678px;
+    margin-bottom: 50px;
+
+    @media (max-width: $tablet-width) {
+      display: flex;
+    }
+
+    @media (max-width: $mobile-width) {
+      width: 290px;
+      margin-bottom: 40px;
+    }
   }
-}
 }

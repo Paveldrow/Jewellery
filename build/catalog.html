@@ -65,8 +65,8 @@
   <main class="page-main">
     <h1 class="visually-hidden">Catalog page Jewellery</h1>
     <div class="intro intro--catalog">
-      <p class="intro__title">All jewellery</p>
-      <p class="intro__subtitle">Discover picks of fashion's finest trends in our jewellery catalog</p>
+      <p class="intro__title intro__title--catalog">All jewellery</p>
+      <p class="intro__subtitle intro__subtitle--catalog">Discover picks of fashion's finest trends in our jewellery catalog</p>
     </div>
     <div class="page-main__catalog-wrapper wrapper">
       <div class="filter">
@@ -124,9 +124,9 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="filter__field filter__field--close">
+          <fieldset class="filter__field">
             <h3 class="filter__list-title">Price</h3>
-            <div class="filter__range">
+            <div class="filter__list filter__range">
               <div class="filter__range-controls">
 
                 <div class="filter__range-scale">
@@ -183,7 +183,7 @@
                 <source media="(max-width: 1023px)" srcset="./img/gold-layered-necklace-tablet.jpg 1x, ./img/gold-layered-necklace-tablet@2x.jpg 2x">
                 <img class="product-card__image" src="./img/gold-layered-necklace-desktop.jpg" srcset="./img/gold-layered-necklace-desktop@2x.jpg 2x" width="270" height="284" alt="Choker with gold bead photo">
               </picture>
-              <h3 class="product-card__title">Choker with gold bead</h3>
+              <h3 class="product-card__title">Gold layered necklace</h3>
               <p class="product-card__price">$ 155</p>
             </a></li>
           <li class="product-card"><a class="product-card__link" href="product-card.html">
@@ -295,20 +295,22 @@
               <p class="product-card__price">$ 95</p>
             </a></li>
         </ul>
-        <div class="catalog__pagination-block pagination">
+
+      </section>
+    </div>
+      <div class="catalog__pagination-wrapper">
+        <div class="catalog__pagination-block pagination wrapper">
           <button class="pagination__button pagination__button--back" type="button">Previous</button>
-          <ul class="pagination__list pagination__list--catalog">
+          <ul class="pagination__list">
             <li class="pagination__item"><a class="pagination__link pagination__link--current" href="#">1</a></li>
             <li class="pagination__item"><a class="pagination__link" href="#">2</a></li>
             <li class="pagination__item"><a class="pagination__link" href="#">3</a></li>
             <li class="pagination__item"><a class="pagination__link" href="#">4</a></li>
             <li class="pagination__item"><a class="pagination__link" href="#">5</a></li>
-            <li class="pagination__item"><a class="pagination__link" href="#">6</a></li>
           </ul>
           <button class="pagination__button pagination__button--next" type="button">Next</button>
         </div>
-      </section>
-    </div>
+      </div>
   </main>
   <footer class="page-footer">
     <div class="page-footer__wrapper wrapper">
@@ -380,7 +382,8 @@
       </form>
     </div>
   </section>
-  <script src="js/script.min.js"></script>
+  <script src="js/vendor.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

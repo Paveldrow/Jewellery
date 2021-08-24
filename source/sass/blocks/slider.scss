@@ -1,13 +1,20 @@
 .slider {
   position: relative;
-  margin-bottom: 115px;
+  width: auto;
+  max-width: 1170px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (max-width: 1365px) {
+    max-width: 870px;
+  }
 
   @media (max-width: $tablet-width) {
-    margin-bottom: 65px;
+    max-width: 678px;
   }
 
   @media (max-width: $mobile-width) {
-    margin-bottom: 55px;
+    max-width: 290px;
   }
 }
 
@@ -21,7 +28,11 @@
 }
 
 .slider__shop-link {
-  margin-bottom: 50px;
+  margin-bottom: 54px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 50px;
+  }
 
   @media (max-width: $mobile-width) {
     margin-bottom: 40px;
@@ -30,15 +41,11 @@
 
 
 .slider__list {
-  display: flex;
-  justify-content: space-between;
-  max-width: 1170px;
-  margin: 0;
-  margin-left: auto;
-  margin-right: auto;
+  //   display: flex;
+  //   justify-content: space-between;
+  // max-width: 1170px;
   margin-bottom: 50px;
-  padding: 0;
-  list-style: none;
+
 
   @media (max-width: $tablet-width) {
     max-width: 678px;
@@ -51,29 +58,13 @@
   }
 }
 
-.slider__item {
-  @media (max-width: $mobile-width) {
-    width: 130px;
-  }
-
-  &--desktop-only {
-    @media (max-width: $tablet-width) {
-      display: none;
-    }
-  }
-}
-
 .slider__image {
   // display: block;
-  margin: 0;
   margin-bottom: 16px;
-  // max-width: 270px;
-  // max-height: 284px;
 
   @media (max-width: $tablet-width) {
     width: 324px;
     height: 340px;
-    margin-bottom: 21px;
   }
 
   @media (max-width: $mobile-width) {
@@ -85,19 +76,28 @@
 
 .slider__button {
   position: absolute;
-  top: 35px;
+  top: 40px;
   width: 40px;
   height: 20px;
+  padding: 0;
   border: none;
   background-color: transparent;
   cursor: pointer;
 
-  &--back {
-    left: 0;
+  &--prev {
+    left: -6px;
+
+    @media (max-width: $tablet-width) {
+      left: 0;
+    }
   }
 
   &--next {
-    right: 0;
+    right: -6px;
+
+    @media (max-width: $tablet-width) {
+      right: 0;
+    }
   }
 
   @media (max-width: $tablet-width) {
@@ -111,8 +111,8 @@
 }
 
 .slider__icon-button {
-  width: 29px;
-  height: 9px;
+  width: 30px;
+  height: 11px;
   stroke: $accent-color;
 
   &--next {

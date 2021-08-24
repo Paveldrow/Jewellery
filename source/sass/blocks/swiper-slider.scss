@@ -1,0 +1,126 @@
+.swiper-container {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 115px;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 65px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 55px;
+  }
+
+  &--product-card {
+    margin-bottom: 125px;
+
+    @media (max-width: $tablet-width) {
+      margin-bottom: 75px;
+    }
+
+    @media (max-width: $mobile-width) {
+      margin-bottom: 65px;
+    }
+  }
+}
+
+.swiper-wrapper {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  transition-property: transform;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.swiper-container-android .swiper-slide,
+.swiper-wrapper {
+  transform: translate3d(0px, 0, 0);
+}
+
+
+.swiper-container-pointer-events {
+  touch-action: pan-y;
+}
+
+.swiper-container-pointer-events.swiper-container-vertical {
+  touch-action: pan-x;
+}
+
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  text-align: center;
+  transition-property: transform;
+}
+
+/* Auto Height */
+.swiper-container-autoheight,
+.swiper-container-autoheight .swiper-slide {
+  height: auto;
+}
+
+/* .swiper-container-autoheight .swiper-wrapper {
+  align-items: flex-start;
+  transition-property: transform, height;
+} */
+
+
+
+
+/* CSS Mode */
+
+
+
+
+
+.slider-pagination {
+  display: none;
+  justify-content: center;
+  text-align: center;
+  transition: 300ms opacity;
+  transform: translate3d(0, 0, 0);
+  z-index: 10;
+
+  @media (min-width: 768px) {
+    display: flex;
+  }
+}
+
+.slider-mobile-pagination {
+  display: none;
+  justify-content: center;
+  margin-left: auto;
+
+  @media (max-width: $mobile-width) {
+    display: flex;
+  }
+}
+
+.slider-mobile-pagination__current {
+  margin-right: 5px;
+}
+
+.slider-mobile-pagination__total {
+  margin-left: 5px;
+}
+
+.swiper-pagination-bullet {
+  margin: 0 6px;
+  color: $light;
+  cursor: pointer;
+}
+
+.swiper-pagination-bullet-active {
+  color: $dark;
+}

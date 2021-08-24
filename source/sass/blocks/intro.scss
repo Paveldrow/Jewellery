@@ -20,7 +20,8 @@
 
   &--catalog {
     min-height: 261px;
-    padding-top: 102px;
+    margin-bottom: 80px;
+    padding-top: 92px;
     background-image: url('../img/intro-catalog-desktop.jpg');
     background-image: -webkit-image-set(url('../img/intro-catalog-desktop.webp') 1x);
 
@@ -57,10 +58,8 @@
 }
 
 .intro--catalog {
-  padding-top: 102px;
-
   @media (max-width: $tablet-width) {
-    margin-bottom: 70px;
+    margin-bottom: 50px;
     background-image: url('../img/intro-catalog-tablet.jpg');
     background-image: -webkit-image-set(url('../img/intro-catalog-tablet.webp') 1x);
 
@@ -71,8 +70,8 @@
   }
 
   @media (max-width: $mobile-width) {
-    padding-top: 89px;
-    margin-bottom: 60px;
+    padding-top: 80px;
+    margin-bottom: 40px;
     background-image: url('../img/intro-catalog-tablet.jpg');
     background-image: -webkit-image-set(url('../img/intro-catalog-mobile.webp') 1x);
 
@@ -107,6 +106,15 @@
     font-size: 38px;
     line-height: 49px;
   }
+
+  &--catalog {
+    letter-spacing: normal;
+    margin-bottom: 2px;
+
+    @media (max-width: $mobile-width) {
+      margin-bottom: 7px;
+    }
+  }
 }
 
 .intro__subtitle {
@@ -116,11 +124,23 @@
   font-weight: 400;
   font-size: 38px;
   line-height: 39px;
+  font-weight: 500;
   color: $white;
 
   @media (max-width: $mobile-width) {
     margin-top: -7px;
     font-size: 34px;
     line-height: 44px;
+  }
+
+  &--catalog {
+    font-size: 22px;
+    line-height: 28px;
+
+    @media (max-width: $mobile-width) {
+      max-width: 277px;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }

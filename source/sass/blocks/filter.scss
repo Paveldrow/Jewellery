@@ -38,8 +38,8 @@
   position: relative;
   margin: 0;
   padding: 0;
-  padding-top: 28px;
-  padding-bottom: 28px;
+  padding-top: 23px;
+  padding-bottom: 24px;
   padding-left: 25px;
   border: none;
   border: 1px solid $accent-color;
@@ -47,12 +47,9 @@
   cursor: pointer;
 
   &:last-of-type {
-    border-bottom: 1px solid $accent-color;
     margin-bottom: 35px;
-
-    &::after {
-      display: none;
-    }
+    padding-bottom: 18px;
+    border-bottom: 1px solid $accent-color;
   }
 
   @media (max-width: $tablet-width) {
@@ -62,11 +59,13 @@
 
   &::after {
     position: absolute;
-    right: 40px;
-    top: 40px;
+    right: 23px;
+    top: 30px;
     content: '';
     width: 16px;
     height: 9px;
+    transform: rotate(180deg);
+
     background-image: url(../../img/icon-arrow-faq.svg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -75,8 +74,11 @@
 }
 
 .filter__field--close {
+  padding-bottom: 22px;
+
+
   &::after {
-    transform: rotate(180deg);
+    transform: none;
   }
 }
 
@@ -93,15 +95,15 @@
 
 .filter__list {
   margin: 0;
-  margin-top: 30px;
-  margin-left: 10px;
+  margin-top: 21px;
+  margin-left: 9px;
   padding: 0;
   list-style: none;
 
 }
 
 .filter__item {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 
   &:last-child {
     margin-bottom: 0;
@@ -111,6 +113,9 @@
 label {
   position: relative;
   padding-left: 25px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
 }
 
 .filter__checkbox+label {
@@ -136,6 +141,8 @@ label {
 
 .filter__range {
   width: 200px;
+  margin-top: 19px;
+  margin-left: 0;
 }
 
 .filter__range-controls {
@@ -166,21 +173,28 @@ label {
   border-radius: 50%;
 
   &--min {
-    left: 45px;
+    left: 44px;
   }
 
   &--max {
-    left: 150px;
+    left: 149px;
   }
 }
 
 .filter__price {
   display: flex;
   justify-content: space-between;
-  margin-left: 38px;
+  margin-left: 37px;
   margin-right: 25px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
 }
 
+.filter__price-item {
+  margin: 0;
+  margin-top: 7px;
+}
 .filter__button {
   display: block;
   box-sizing: border-box;
@@ -219,15 +233,20 @@ label {
 
   &--close {
     position: absolute;
+    display: none;
     top: -16px;
     right: -16px;
-    display: flex;
     justify-content: center;
     align-items: center;
     width: 32px;
     height: 32px;
     border-radius: 50%;
     background-color: $black;
+    z-index: 2;
+
+    @media (max-width: $tablet-width) {
+      display: flex;
+    }
   }
 }
 

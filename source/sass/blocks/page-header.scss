@@ -11,6 +11,14 @@
     padding-bottom: 2px;
   }
 
+  &--product-card {
+    border-bottom: 1px solid $border;
+
+    @media (max-width: $tablet-width) {
+      border: none;
+    }
+  }
+
   &--open-menu {
     background-color: $accent-color;
     padding-bottom: 75px;

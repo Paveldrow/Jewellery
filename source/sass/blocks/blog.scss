@@ -11,7 +11,12 @@
 }
 
 .blog__link {
+
   @media (max-width: $tablet-width) {
+    margin-bottom: 60px;
+  }
+
+  @media (max-width: $mobile-width) {
     margin-bottom: 50px;
   }
 }

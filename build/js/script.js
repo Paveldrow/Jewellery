@@ -69,7 +69,7 @@ loginModalcloseButton.addEventListener('click', () => {
   closeLoginModal()
 });
 
-// Cart modal
+// // Cart modal
 
 const cartModal = document.querySelector('.modal-cart');
 const addToCartButton = document.querySelector('.product__button-add-cart');
@@ -115,7 +115,7 @@ if (cartModalCloseButton) {
   });
 };
 
-// open menu
+// // open menu
 
 const controlMenu = function () {
   pageHeader.classList.toggle('page-header--open-menu');
@@ -151,7 +151,7 @@ const closeFilter = function () {
   filter.classList.remove('filter--open');
 };
 
-if (openFilterButton) {
+if (filter) {
   openFilterButton.addEventListener('click', () => {
     openFilter();
   });
@@ -164,7 +164,7 @@ if (closeFilterButton) {
   });
 };
 
-// Trap focus
+// // Trap focus
 
 const trapFocus = function (element) {
   var focusableEls = element.querySelectorAll('a[href]:not([disabled]), button:not([disabled]), textarea:not([disabled]), input[type="text"]:not([disabled]), input[type="radio"]:not([disabled]), input[type="checkbox"]:not([disabled]), select:not([disabled])');
@@ -192,10 +192,7 @@ const trapFocus = function (element) {
   });
 };
 
-
-
-
-// Input reset
+// // Input Search reset
 
 const searchInputClean = function () {
   const searchInput = document.querySelector('.search-form > input');
@@ -222,4 +219,128 @@ const openingAccordeon = function (items) {
 };
 
 openingAccordeon(faqItems);
+
+// new Swiper('.slider');
+
+const slider = document.querySelector('.slider');
+const sliderContainer = document.querySelector('.swiper-container');
+const paginationBlock = document.querySelector('.slider-pagination');
+const currentDotOut = document.querySelector('.slider-mobile-pagination__current');
+const totalDotsOut = document.querySelector('.slider-mobile-pagination__total');
+let swiper;
+
+const ACTIVE_BULLET_CLASS = 'swiper-pagination-bullet-active';
+const BREAKPOINT_MOBILE = 767;
+
+
+const initSwapper = function () {
+  if (slider) {
+    swiper = new Swiper('.swiper-container', {
+      loop: true,
+      slidesPerGroup: 2,
+      slidesPerView: 2,
+      centeredSlides: false,
+      spaceBetween: 30,
+      centeredSlidesBounds: true,
+
+      // If we need pagination
+      pagination: {
+        el: document.querySelector('.slider-pagination'),
+        clickable: 'true',
+        renderBullet(index, className) {
+          return '<span class="' + className + '">' + (index + 1) + '</span>';
+        },
+      },
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+
+      breakpoints: {
+        767: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+        },
+        1023: {
+          slidesPerView: 4,
+          slidesPerGroup: 4,
+        },
+        1365: {
+          slidesPerView: 4,
+          slidesPerGroup: 4,
+        },
+      },
+
+    });
+    initSlider();
+  }
+}
+
+
+const getBullets = function () {
+  let bullets;
+  if (paginationBlock) {
+    bullets = paginationBlock.children;
+  }
+  return bullets;
+}
+
+const setMobileTotalBullet = function (bullets) {
+  let totalBullets = bullets.length;
+
+  return totalBullets;
+}
+
+const setMobileCurrentBullet = function (bullets) {
+  let currentBullet;
+  Array.from(bullets).forEach((element) => {
+    if (element.classList.contains(ACTIVE_BULLET_CLASS)) {
+      currentBullet = +element.textContent;
+    }
+  });
+
+  return currentBullet;
+}
+
+const renderMobilePagination = function (bullets) {
+  totalDotsOut.textContent = setMobileTotalBullet(bullets);
+  currentDotOut.textContent = setMobileCurrentBullet(bullets);
+}
+
+const realIndexChangeHandler = function (bullets) {
+  swiper.on('transitionEnd', function () {
+    renderMobilePagination(bullets);
+  });
+}
+
+const setMobilePagination = function () {
+  let bullets = getBullets();
+  realIndexChangeHandler(bullets);
+}
+
+const breakpointChangeHandler = function () {
+  let viewport = document.documentElement.clientWidth;
+
+  if (viewport < BREAKPOINT_MOBILE) {
+    setMobilePagination();
+  }
+}
+
+const initMobilePagination = function () {
+  let bullets = getBullets();
+  renderMobilePagination(bullets);
+};
+
+const initSlider = function () {
+
+
+  initMobilePagination();
+  breakpointChangeHandler();
+  swiper.on('breakpoint', breakpointChangeHandler);
+}
+
+
+initSwapper();
 

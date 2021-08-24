@@ -2,8 +2,13 @@
   margin-top: 0;
   margin-bottom: 0;
   padding: 0;
+  margin-top: 6px;
   list-style: none;
   flex-shrink: 1;
+
+  @media (max-width: $tablet-width) {
+    margin-top: 0;
+  }
 
   @media (max-width: $mobile-width) {
     display: flex;
@@ -12,7 +17,7 @@
 
 .social__item {
   width: 115px;
-  margin-bottom: 10px;
+  margin-bottom: 21px;
 
   @media (max-width: $tablet-width) {
     margin-bottom: 21px;

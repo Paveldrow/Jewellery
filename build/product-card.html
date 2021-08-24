@@ -17,7 +17,7 @@
 </head>
 
 <body class="page__body">
-  <header class="page-header">
+  <header class="page-header page-header--product-card">
     <nav class="page-header__main-nav wrapper">
       <button class="page-header__button-menu"><span class="visually-hidden">Меню</span>
         <svg class="page-header__icon-menu" width="27" height="18">
@@ -66,7 +66,7 @@
     <div class="product">
       <div class="product__info">
         <h1 class="product__title">Gold Necklace </h1>
-        <p class="product__price">$ 115</p>
+        <p class="product__price"><span class="product__currency">$</span>115</p>
         <div class="product__info-control">
           <a class="product__description" href="#">Description</a>
           <a class="product__additional" href="#">Additional info</a>
@@ -82,20 +82,19 @@
           </tr>
           <tr class="product__table-info-row">
             <td class="product__parameter">Size</td>
-            <td class="product__value">18” / 20”</td>
+            <td class="product__value">18”/ 20”</td>
           </tr>
         </table>
         <button class="product__button-add-cart">Add to cart</button>
         <ul class="product__service-list">
           <li class="product__service-item">14 Day Returns</li>
           <li class="product__service-item">2-Year Warranty</li>
-          <li class="product__service-item">Shipping</li>
+          <li class="product__service-item">Free Shipping</li>
         </ul>
       </div>
       <div class="product__photo">
         <ul class="product__photo-list">
           <li class="product__photo-item">
-
               <picture>
                 <source type="image/webp" media="(max-width: 1023px)" srcset="./img/gold-necklace-1-tablet.webp 1x, ./img/gold-necklace-1-tablet@2x.webp 2x">
                 <source type="image/webp" srcset="./img/gold-necklace-1-desktop.webp 1x, ./img/gold-necklace-1-desktop@2x.webp 2x">
@@ -103,10 +102,8 @@
                 <source media="(max-width: 1023px)" srcset="./img/gold-necklace-1-tablet.jpg 1x, ./img/gold-necklace-1-tablet@2x.jpg 2x">
                 <img class="product__photo-preview" src="./img/gold-necklace-1-desktop.jpg" srcset="./img/gold-necklace-1-desktop@2x.jpg 2x" width="100" height="125" alt="Gold Necklace photo 1">
               </picture>
-
           </li>
           <li class="product__photo-item">
-
               <picture>
                 <source type="image/webp" media="(max-width: 1023px)" srcset="./img/gold-necklace-2-tablet.webp 1x, ./img/gold-necklace-2-tablet@2x.webp 2x">
                 <source type="image/webp" srcset="./img/gold-necklace-2-desktop.webp 1x, ./img/gold-necklace-2-desktop@2x.webp 2x">
@@ -114,10 +111,8 @@
                 <source media="(max-width: 1023px)" srcset="./img/gold-necklace-2-tablet.jpg 1x, ./img/gold-necklace-2-tablet@2x.jpg 2x">
                 <img class="product__photo-preview" src="./img/gold-necklace-2-desktop.jpg" srcset="./img/gold-necklace-2-desktop@2x.jpg 2x" width="100" height="125" alt="Gold Necklace photo 1">
               </picture>
-
           </li>
           <li class="product__photo-item">
-
               <picture>
                 <source type="image/webp" media="(max-width: 1023px)" srcset="./img/gold-necklace-3-tablet.webp 1x, ./img/gold-necklace-3-tablet@2x.webp 2x">
                 <source type="image/webp" srcset="./img/gold-necklace-3-desktop.webp 1x, ./img/gold-necklace-3-desktop@2x.webp 2x">
@@ -125,7 +120,6 @@
                 <source media="(max-width: 1023px)" srcset="./img/gold-necklace-3-tablet.jpg 1x, ./img/gold-necklace-3-tablet@2x.jpg 2x">
                 <img class="product__photo-preview" src="./img/gold-necklace-3-desktop.jpg" srcset="./img/gold-necklace-3-desktop@2x.jpg 2x" width="100" height="125" alt="Gold Necklace photo 1">
               </picture>
-
           </li>
         </ul>
         <picture>
@@ -136,79 +130,152 @@
           <source media="(max-width: 1023px)" srcset="./img/gold-necklace-full-tablet.jpg 1x, ./img/gold-necklace-full-tablet@2x.jpg 2x">
           <img class="product__photo-full" src="./img/gold-necklace-full-desktop.jpg" srcset="./img/gold-necklace-full-desktop@2x.jpg 2x" width="470" height="435" alt="Gold Necklace full photo">
         </picture>
+        <p class="product__photo-list-pagination">1<span class="product__photo-list-pagination-separator">of</span>4</p>
       </div>
     </div>
     <section class="slider">
       <h2 class="visually-hidden">Novelty slider</h2>
-      <p class="slider__title block-title">New In</p>
+      <p class="slider__title block-title">You May Also Like</p>
       <a class="slider__shop-link block-link" href="catalog.html">Shop Now</a>
-      <button class="slider__button slider__button--back" type="button"><span class="visually-hidden">Back slide</span>
-        <svg class="slider__icon-button" width="30" height="11">
-          <use xlink:href="./img/sprite_auto.svg#icon-slider-button"></use>
-        </svg>
-      </button>
-      <button class="slider__button slider__button--next" type="button"><span class="visually-hidden">Next slide</span>
-        <svg class="slider__icon-button slider__icon-button--next" width="30" height="11">
-          <use xlink:href="./img/sprite_auto.svg#icon-slider-button"></use>
-        </svg>
-      </button>
-      <ul class="slider__list">
-        <li class="slider__item product-card"><a class="product-card__link" href="product-card.html">
-            <picture>
-              <source type="image/webp" media="(max-width: 767px)" srcset="./img/slider-necklace-with-amethyst-mobile.webp 1x, ./img/slider-necklace-with-amethyst-mobile@2x.webp 2x">
-              <source type="image/webp" media="(max-width: 1023px)" srcset="./img/slider-necklace-with-amethyst-tablet.webp 1x, ./img/slider-necklace-with-amethyst-tablet@2x.webp 2x">
-              <source type="image/webp" srcset=" ./img/slider-necklace-with-amethyst-desktop.webp 1x, ./img/slider-necklace-with-amethyst-desktop@2x.webp 2x">
-              <source media="(max-width: 767px)" srcset="./img/slider-necklace-with-amethyst-mobile.jpg 1x, ./img/slider-necklace-with-amethyst-mobile@2x.jpg 2x">
-              <source media="(max-width: 1023px)" srcset="./img/slider-necklace-with-amethyst-tablet.jpg 1x, ./img/slider-necklace-with-amethyst-tablet@2x.jpg 2x">
-              <img class="slider__image" src="./img/slider-necklace-with-amethyst-desktop.jpg" srcset="./img/slider-necklace-with-amethyst-desktop@2x.jpg 2x" width="270" height="284" alt="Necklace with amethyst photo">
-            </picture>
-            <h3 class="product-card__title">Necklace with amethyst</h3>
-            <p class="product-card__price">$ 145</p>
-          </a></li>
-        <li class="slider__item product-card"><a class="product-card__link" href="product-card.html">
-            <picture>
-              <source type="image/webp" media="(max-width: 767px)" srcset="./img/slider-layered-choker-mobile.webp 1x, ./img/slider-layered-choker-mobile@2x.webp 2x">
-              <source type="image/webp" media="(max-width: 1023px)" srcset="./img/slider-layered-choker-tablet.webp 1x, ./img/slider-layered-choker-tablet@2x.webp 2x">
-              <source type="image/webp" srcset=" ./img/slider-layered-choker-desktop.webp 1x, ./img/slider-layered-choker-desktop@2x.webp 2x">
-              <source media="(max-width: 767px)" srcset="./img/slider-layered-choker-mobile.jpg 1x, ./img/slider-layered-choker-mobile@2x.jpg 2x">
-              <source media="(max-width: 1023px)" srcset="./img/slider-layered-choker-tablet.jpg 1x, ./img/slider-layered-choker-tablet@2x.jpg 2x">
-              <img class="slider__image" src="./img/slider-layered-choker-desktop.jpg" srcset="./img/slider-layered-choker-desktop@2x.jpg 2x" width="270" height="284" alt="Layered choker photo">
-            </picture>
-            <h3 class="product-card__title">Layered сhoker</h3>
-            <p class="product-card__price">$ 115</p>
-          </a></li>
-        <li class="slider__item slider__item--desktop-only product-card"><a class="product-card__link" href="product-card.html">
-            <picture>
-              <source type="image/webp" srcset=" ./img/slider-gold-chain-desktop.webp 1x, ./img/slider-gold-chain-desktop@2x.webp 2x">
-              <img class="slider__image" src="./img/slider-gold-chain-desktop.jpg" srcset="./img/slider-gold-chain-desktop@2x.jpg 2x" width="270" height="284" alt="Gold chain photo">
-            </picture>
-            <h3 class="product-card__title">Gold chain</h3>
-            <p class="product-card__price">$ 215</p>
-          </a></li>
-        <li class="slider__item slider__item--desktop-only product-card"><a class="product-card__link" href="product-card.html">
-            <picture>
-              <source type="image/webp" srcset=" ./img/slider-galaxy-earrings-desktop.webp 1x, ./img/slider-galaxy-earrings-desktop@2x.webp 2x">
-              <img class="slider__image" src="./img/slider-galaxy-earrings-desktop.jpg" srcset="./img/slider-galaxy-earrings-desktop@2x.jpg 2x" width="270" height="284" alt="Galaxy earrings photo">
-            </picture>
-            <h3 class="product-card__title">Galaxy earrings</h3>
-            <p class="product-card__price">$ 95</p>
-          </a></li>
-      </ul>
-      <div class="pagination">
-        <ul class="pagination__list pagination__list--desktop">
-          <li class="pagination__item"><a class="pagination__link pagination__link--current" href="#">1</a></li>
-          <li class="pagination__item"><a class="pagination__link" href="#">2</a></li>
-          <li class="pagination__item"><a class="pagination__link" href="#">3</a></li>
+      <div class="swiper-container swiper-container--product-card">
+        <ul class="swiper-wrapper slider__list">
+          <li class="swiper-slide"><a href="product-card.html">
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)" srcset="./img/slider-necklace-with-amethyst-mobile.webp 1x, ./img/slider-necklace-with-amethyst-mobile@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1023px)" srcset="./img/slider-necklace-with-amethyst-tablet.webp 1x, ./img/slider-necklace-with-amethyst-tablet@2x.webp 2x">
+                <source type="image/webp" srcset=" ./img/slider-necklace-with-amethyst-desktop.webp 1x, ./img/slider-necklace-with-amethyst-desktop@2x.webp 2x">
+                <source media="(max-width: 767px)" srcset="./img/slider-necklace-with-amethyst-mobile.jpg 1x, ./img/slider-necklace-with-amethyst-mobile@2x.jpg 2x">
+                <source media="(max-width: 1023px)" srcset="./img/slider-necklace-with-amethyst-tablet.jpg 1x, ./img/slider-necklace-with-amethyst-tablet@2x.jpg 2x">
+                <img class="slider__image" src="./img/slider-necklace-with-amethyst-desktop.jpg" srcset="./img/slider-necklace-with-amethyst-desktop@2x.jpg 2x" width="270" height="284" alt="Necklace with amethyst photo">
+              </picture>
+              <h3 class="product-card__title">Necklace with amethyst</h3>
+              <p class="product-card__price">$ 145</p>
+            </a></li>
+          <li class="swiper-slide"><a href="product-card.html">
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)" srcset="./img/slider-layered-choker-mobile.webp 1x, ./img/slider-layered-choker-mobile@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1023px)" srcset="./img/slider-layered-choker-tablet.webp 1x, ./img/slider-layered-choker-tablet@2x.webp 2x">
+                <source type="image/webp" srcset=" ./img/slider-layered-choker-desktop.webp 1x, ./img/slider-layered-choker-desktop@2x.webp 2x">
+                <source media="(max-width: 767px)" srcset="./img/slider-layered-choker-mobile.jpg 1x, ./img/slider-layered-choker-mobile@2x.jpg 2x">
+                <source media="(max-width: 1023px)" srcset="./img/slider-layered-choker-tablet.jpg 1x, ./img/slider-layered-choker-tablet@2x.jpg 2x">
+                <img class="slider__image" src="./img/slider-layered-choker-desktop.jpg" srcset="./img/slider-layered-choker-desktop@2x.jpg 2x" width="270" height="284" alt="Layered choker photo">
+              </picture>
+              <h3 class="product-card__title">Layered сhoker</h3>
+              <p class="product-card__price">$ 115</p>
+            </a></li>
+          <li class="swiper-slide"><a class="product-card__link" href="product-card.html">
+              <picture>
+                <source type="image/webp" srcset=" ./img/slider-gold-chain-desktop.webp 1x, ./img/slider-gold-chain-desktop@2x.webp 2x">
+                <img class="slider__image" src="./img/slider-gold-chain-desktop.jpg" srcset="./img/slider-gold-chain-desktop@2x.jpg 2x" width="270" height="284" alt="Gold chain photo">
+              </picture>
+              <h3 class="product-card__title">Gold chain</h3>
+              <p class="product-card__price">$ 215</p>
+            </a></li>
+          <li class="swiper-slide"><a href="product-card.html">
+              <picture>
+                <source type="image/webp" srcset=" ./img/slider-galaxy-earrings-desktop.webp 1x, ./img/slider-galaxy-earrings-desktop@2x.webp 2x">
+                <img class="slider__image" src="./img/slider-galaxy-earrings-desktop.jpg" srcset="./img/slider-galaxy-earrings-desktop@2x.jpg 2x" width="270" height="284" alt="Galaxy earrings photo">
+              </picture>
+              <h3 class="product-card__title">Galaxy earrings</h3>
+              <p class="product-card__price">$ 95</p>
+            </a></li>
+          <li class="swiper-slide"><a href="product-card.html">
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)" srcset="./img/slider-necklace-with-amethyst-mobile.webp 1x, ./img/slider-necklace-with-amethyst-mobile@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1023px)" srcset="./img/slider-necklace-with-amethyst-tablet.webp 1x, ./img/slider-necklace-with-amethyst-tablet@2x.webp 2x">
+                <source type="image/webp" srcset=" ./img/slider-necklace-with-amethyst-desktop.webp 1x, ./img/slider-necklace-with-amethyst-desktop@2x.webp 2x">
+                <source media="(max-width: 767px)" srcset="./img/slider-necklace-with-amethyst-mobile.jpg 1x, ./img/slider-necklace-with-amethyst-mobile@2x.jpg 2x">
+                <source media="(max-width: 1023px)" srcset="./img/slider-necklace-with-amethyst-tablet.jpg 1x, ./img/slider-necklace-with-amethyst-tablet@2x.jpg 2x">
+                <img class="slider__image" src="./img/slider-necklace-with-amethyst-desktop.jpg" srcset="./img/slider-necklace-with-amethyst-desktop@2x.jpg 2x" width="270" height="284" alt="Necklace with amethyst photo">
+              </picture>
+              <h3 class="product-card__title">Necklace with amethyst</h3>
+              <p class="product-card__price">$ 145</p>
+            </a></li>
+          <li class="swiper-slide"><a href="product-card.html">
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)" srcset="./img/slider-layered-choker-mobile.webp 1x, ./img/slider-layered-choker-mobile@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1023px)" srcset="./img/slider-layered-choker-tablet.webp 1x, ./img/slider-layered-choker-tablet@2x.webp 2x">
+                <source type="image/webp" srcset=" ./img/slider-layered-choker-desktop.webp 1x, ./img/slider-layered-choker-desktop@2x.webp 2x">
+                <source media="(max-width: 767px)" srcset="./img/slider-layered-choker-mobile.jpg 1x, ./img/slider-layered-choker-mobile@2x.jpg 2x">
+                <source media="(max-width: 1023px)" srcset="./img/slider-layered-choker-tablet.jpg 1x, ./img/slider-layered-choker-tablet@2x.jpg 2x">
+                <img class="slider__image" src="./img/slider-layered-choker-desktop.jpg" srcset="./img/slider-layered-choker-desktop@2x.jpg 2x" width="270" height="284" alt="Layered choker photo">
+              </picture>
+              <h3 class="product-card__title">Layered сhoker</h3>
+              <p class="product-card__price">$ 115</p>
+            </a></li>
+          <li class="swiper-slide"><a href="product-card.html">
+              <picture>
+                <source type="image/webp" srcset=" ./img/slider-gold-chain-desktop.webp 1x, ./img/slider-gold-chain-desktop@2x.webp 2x">
+                <img class="slider__image" src="./img/slider-gold-chain-desktop.jpg" srcset="./img/slider-gold-chain-desktop@2x.jpg 2x" width="270" height="284" alt="Gold chain photo">
+              </picture>
+              <h3 class="product-card__title">Gold chain</h3>
+              <p class="product-card__price">$ 215</p>
+            </a></li>
+          <li class="swiper-slide"><a href="product-card.html">
+              <picture>
+                <source type="image/webp" srcset=" ./img/slider-galaxy-earrings-desktop.webp 1x, ./img/slider-galaxy-earrings-desktop@2x.webp 2x">
+                <img class="slider__image" src="./img/slider-galaxy-earrings-desktop.jpg" srcset="./img/slider-galaxy-earrings-desktop@2x.jpg 2x" width="270" height="284" alt="Galaxy earrings photo">
+              </picture>
+              <h3 class="product-card__title">Galaxy earrings</h3>
+              <p class="product-card__price">$ 95</p>
+            </a></li>
+            <li class="swiper-slide"><a class="" href="product-card.html">
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)" srcset="./img/slider-necklace-with-amethyst-mobile.webp 1x, ./img/slider-necklace-with-amethyst-mobile@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1023px)" srcset="./img/slider-necklace-with-amethyst-tablet.webp 1x, ./img/slider-necklace-with-amethyst-tablet@2x.webp 2x">
+                <source type="image/webp" srcset=" ./img/slider-necklace-with-amethyst-desktop.webp 1x, ./img/slider-necklace-with-amethyst-desktop@2x.webp 2x">
+                <source media="(max-width: 767px)" srcset="./img/slider-necklace-with-amethyst-mobile.jpg 1x, ./img/slider-necklace-with-amethyst-mobile@2x.jpg 2x">
+                <source media="(max-width: 1023px)" srcset="./img/slider-necklace-with-amethyst-tablet.jpg 1x, ./img/slider-necklace-with-amethyst-tablet@2x.jpg 2x">
+                <img class="slider__image" src="./img/slider-necklace-with-amethyst-desktop.jpg" srcset="./img/slider-necklace-with-amethyst-desktop@2x.jpg 2x" width="270" height="284" alt="Necklace with amethyst photo">
+              </picture>
+              <h3 class="product-card__title">Necklace with amethyst</h3>
+              <p class="product-card__price">$ 145</p>
+            </a></li>
+          <li class="swiper-slide"><a href="product-card.html">
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)" srcset="./img/slider-layered-choker-mobile.webp 1x, ./img/slider-layered-choker-mobile@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1023px)" srcset="./img/slider-layered-choker-tablet.webp 1x, ./img/slider-layered-choker-tablet@2x.webp 2x">
+                <source type="image/webp" srcset=" ./img/slider-layered-choker-desktop.webp 1x, ./img/slider-layered-choker-desktop@2x.webp 2x">
+                <source media="(max-width: 767px)" srcset="./img/slider-layered-choker-mobile.jpg 1x, ./img/slider-layered-choker-mobile@2x.jpg 2x">
+                <source media="(max-width: 1023px)" srcset="./img/slider-layered-choker-tablet.jpg 1x, ./img/slider-layered-choker-tablet@2x.jpg 2x">
+                <img class="slider__image" src="./img/slider-layered-choker-desktop.jpg" srcset="./img/slider-layered-choker-desktop@2x.jpg 2x" width="270" height="284" alt="Layered choker photo">
+              </picture>
+              <h3 class="product-card__title">Layered сhoker</h3>
+              <p class="product-card__price">$ 115</p>
+            </a></li>
+          <li class="swiper-slide"><a href="product-card.html">
+              <picture>
+                <source type="image/webp" srcset=" ./img/slider-gold-chain-desktop.webp 1x, ./img/slider-gold-chain-desktop@2x.webp 2x">
+                <img class="slider__image" src="./img/slider-gold-chain-desktop.jpg" srcset="./img/slider-gold-chain-desktop@2x.jpg 2x" width="270" height="284" alt="Gold chain photo">
+              </picture>
+              <h3 class="product-card__title">Gold chain</h3>
+              <p class="product-card__price">$ 215</p>
+            </a></li>
+          <li class="swiper-slide"><a href="product-card.html">
+              <picture>
+                <source type="image/webp" srcset=" ./img/slider-galaxy-earrings-desktop.webp 1x, ./img/slider-galaxy-earrings-desktop@2x.webp 2x">
+                <img class="slider__image" src="./img/slider-galaxy-earrings-desktop.jpg" srcset="./img/slider-galaxy-earrings-desktop@2x.jpg 2x" width="270" height="284" alt="Galaxy earrings photo">
+              </picture>
+              <h3 class="product-card__title">Galaxy earrings</h3>
+              <p class="product-card__price">$ 95</p>
+            </a></li>
         </ul>
-        <ul class="pagination__list pagination__list--tablet">
-          <li class="pagination__item"><a class="pagination__link pagination__link--current" href="#">1</a></li>
-          <li class="pagination__item"><a class="pagination__link" href="#">2</a></li>
-          <li class="pagination__item"><a class="pagination__link" href="#">3</a></li>
-          <li class="pagination__item"><a class="pagination__link" href="#">4</a></li>
-          <li class="pagination__item"><a class="pagination__link" href="#">5</a></li>
-          <li class="pagination__item"><a class="pagination__link" href="#">6</a></li>
-        </ul>
-        <p class="pagination__list pagination__list--mobile"><span class="pagination__item pagination__item--mobile-current">1</span>of<span class="pagination__item pagination__item--mobile-amount">6</span></p>
+        <div class="slider-pagination"></div>
+        <div class="slider-mobile-pagination">
+          <span class="slider-mobile-pagination__current">current</span>
+          &nbsp;of&nbsp;
+          <span class="slider-mobile-pagination__total">total</span>
+        </div>
+        <button class="swiper-button-prev slider__button slider__button--prev" type="button"><span class="visually-hidden">Back slide</span>
+          <svg class="slider__icon-button" width="29" height="9">
+            <use xlink:href="./img/sprite_auto.svg#icon-slider-button"></use>
+          </svg>
+        </button>
+        <button class="swiper-button-next slider__button slider__button--next" type="button"><span class="visually-hidden">Next slide</span>
+          <svg class="slider__icon-button slider__icon-button--next" width="29" height="9">
+            <use xlink:href="./img/sprite_auto.svg#icon-slider-button"></use>
+          </svg>
+        </button>
       </div>
     </section>
   </main>
@@ -329,7 +396,8 @@
       </form>
     </div>
   </section>
-  <script src="js/script.min.js"></script>
+  <script src="js/vendor.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

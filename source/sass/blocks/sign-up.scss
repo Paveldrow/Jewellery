@@ -37,7 +37,7 @@
 
 .sign-up__form {
   display: flex;
-  padding-bottom: 6px;
+  padding-bottom: 7px;
   border-bottom: 1px solid $white;
 
   @media (max-width: $tablet-width) {
@@ -70,6 +70,7 @@
 }
 
 .sign-up__button-submit {
+  padding: 0;
   font-family: 'Poppins';
   font-weight: 500;
   font-size: 16px;
