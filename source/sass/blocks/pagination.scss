@@ -1,3 +1,36 @@
+.pagination__wrapper {
+  border-top: 1px solid $border;
+}
+
+.catalog__block {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 398px;
+  padding-top: 35px;
+  margin-bottom: 75px;
+
+  @media (max-width: $tablet-width) {
+    padding-left: 45px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-left: 15px;
+    padding-top: 15px;
+    margin-bottom: 65px;
+  }
+}
+
+.pagination__button {
+  padding: 0;
+
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
+}
+
 .pagination__list {
   display: flex;
   justify-content: center;
