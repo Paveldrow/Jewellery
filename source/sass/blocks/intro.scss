@@ -9,12 +9,12 @@
 
   &--index {
     min-height: 463px;
-    background-image: url('../img/intro-index-desktop.jpg');
-    background-image: -webkit-image-set(url('../img/intro-index-desktop.webp') 1x);
+    background-image: url("../img/intro-index-desktop.jpg");
+    background-image: -webkit-image-set(url("../img/intro-index-desktop.webp") 1x);
 
     @media (min-resolution: $retina-display) {
-      background-image: url('../img/intro-index-desktop@2x.jpg');
-      background-image: -webkit-image-set(url('../img/intro-index-desktop@2x.webp') 2x);
+      background-image: url("../img/intro-index-desktop@2x.jpg");
+      background-image: -webkit-image-set(url("../img/intro-index-desktop@2x.webp") 2x);
     }
   }
 
@@ -22,12 +22,12 @@
     min-height: 261px;
     margin-bottom: 80px;
     padding-top: 92px;
-    background-image: url('../img/intro-catalog-desktop.jpg');
-    background-image: -webkit-image-set(url('../img/intro-catalog-desktop.webp') 1x);
+    background-image: url("../img/intro-catalog-desktop.jpg");
+    background-image: -webkit-image-set(url("../img/intro-catalog-desktop.webp") 1x);
 
     @media (min-resolution: $retina-display) {
-      background-image: url('../img/intro-catalog-desktop@2x.jpg');
-      background-image: -webkit-image-set(url('../img/intro-catalog-desktop@2x.webp') 2x);
+      background-image: url("../img/intro-catalog-desktop@2x.jpg");
+      background-image: -webkit-image-set(url("../img/intro-catalog-desktop@2x.webp") 2x);
     }
   }
 }
@@ -35,24 +35,24 @@
 .intro--index {
   @media (max-width: $tablet-width) {
     margin-bottom: 70px;
-    background-image: url('../img/intro-index-tablet.jpg');
-    background-image: -webkit-image-set(url('../img/intro-index-tablet.webp') 1x);
+    background-image: url("../img/intro-index-tablet.jpg");
+    background-image: -webkit-image-set(url("../img/intro-index-tablet.webp") 1x);
 
     @media (min-resolution: 2dppx) {
-      background-image: url('../img/intro-index-tablet@2x.jpg');
-      background-image: -webkit-image-set(url('../img/intro-index-tablet@2x.webp') 2x);
+      background-image: url("../img/intro-index-tablet@2x.jpg");
+      background-image: -webkit-image-set(url("../img/intro-index-tablet@2x.webp") 2x);
     }
   }
 
   @media (max-width: $mobile-width) {
     padding-top: 189px;
     margin-bottom: 60px;
-    background-image: url('../img/intro-index-tablet.jpg');
-    background-image: -webkit-image-set(url('../img/intro-index-mobile.webp') 1x);
+    background-image: url("../img/intro-index-tablet.jpg");
+    background-image: -webkit-image-set(url("../img/intro-index-mobile.webp") 1x);
 
     @media (min-resolution: 2dppx) {
-      background-image: url('../img/intro-index-mobile@2x.jpg');
-      background-image: -webkit-image-set(url('../img/intro-index-mobile@2x.webp') 2x);
+      background-image: url("../img/intro-index-mobile@2x.jpg");
+      background-image: -webkit-image-set(url("../img/intro-index-mobile@2x.webp") 2x);
     }
   }
 }
@@ -60,24 +60,24 @@
 .intro--catalog {
   @media (max-width: $tablet-width) {
     margin-bottom: 50px;
-    background-image: url('../img/intro-catalog-tablet.jpg');
-    background-image: -webkit-image-set(url('../img/intro-catalog-tablet.webp') 1x);
+    background-image: url("../img/intro-catalog-tablet.jpg");
+    background-image: -webkit-image-set(url("../img/intro-catalog-tablet.webp") 1x);
 
     @media (min-resolution: 2dppx) {
-      background-image: url('../img/intro-catalog-tablet@2x.jpg');
-      background-image: -webkit-image-set(url('../img/intro-catalog-tablet@2x.webp') 2x);
+      background-image: url("../img/intro-catalog-tablet@2x.jpg");
+      background-image: -webkit-image-set(url("../img/intro-catalog-tablet@2x.webp") 2x);
     }
   }
 
   @media (max-width: $mobile-width) {
     padding-top: 80px;
     margin-bottom: 40px;
-    background-image: url('../img/intro-catalog-tablet.jpg');
-    background-image: -webkit-image-set(url('../img/intro-catalog-mobile.webp') 1x);
+    background-image: url("../img/intro-catalog-tablet.jpg");
+    background-image: -webkit-image-set(url("../img/intro-catalog-mobile.webp") 1x);
 
     @media (min-resolution: 2dppx) {
-      background-image: url('../img/intro-catalog-mobile@2x.jpg');
-      background-image: -webkit-image-set(url('../img/intro-catalog-mobile@2x.webp') 2x);
+      background-image: url("../img/intro-catalog-mobile@2x.jpg");
+      background-image: -webkit-image-set(url("../img/intro-catalog-mobile@2x.webp") 2x);
     }
   }
 }
@@ -94,7 +94,7 @@
 
 .intro__title {
   margin: 0;
-  font-family: 'Cormorant Garamond';
+  font-family: "Cormorant Garamond", "Arial", sans-serif;
   font-weight: 700;
   font-size: 45px;
   line-height: 57px;
@@ -119,7 +119,7 @@
 
 .intro__subtitle {
   margin: 0;
-  font-family: 'Cormorant Garamond';
+  font-family: "Cormorant Garamond", "Arial", sans-serif;
   font-style: italic;
   font-weight: 400;
   font-size: 38px;

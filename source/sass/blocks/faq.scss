@@ -58,10 +58,10 @@
     position: absolute;
     right: 48px;
     top: 50px;
-    content: '';
+    content: "";
     width: 16px;
     height: 9px;
-    background-image: url(../../img/icon-arrow-faq.svg);
+    background-image: url("../img/icon-arrow-faq.svg");
     background-repeat: no-repeat;
     background-size: cover;
     transition: 0.1s;
@@ -109,6 +109,15 @@
   margin: 0;
   font-size: 18px;
   line-height: 23px;
+
+  &:focus,
+  &:hover {
+    color: $light;
+  }
+
+  &:active {
+    color: darken($light, 20%);
+  }
 
   @media (max-width: $mobile-width) {
     padding-right: 15px;

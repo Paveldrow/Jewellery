@@ -5,15 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Jewellery</title>
   <link rel="stylesheet" href="css/style.min.css">
-  <link href="./fonts/Poppins-Bold.woff2" as="font" rel="preload" crossorigin="anonymous">
   <link href="./fonts/Poppins-Medium.woff2" as="font" rel="preload" crossorigin="anonymous">
-  <link href="./fonts/Poppins-Regular.woff2" as="font" rel="preload" crossorigin="anonymous">
-  <link href="./fonts/Cormorant-Garamond-Bold.woff2" as="font" rel="preload" crossorigin="anonymous">
-  <link href="./fonts/Cormorant-Garamond-SemiBold.woff2" as="font" rel="preload" crossorigin="anonymous">
-  <link href="./fonts/Cormorant-Garamond-Medium-Italic.woff2" as="font" rel="preload" crossorigin="anonymous">
-  <link href="./fonts/Cormorant-Garamond-Regular-Italic.woff2" as="font" rel="preload" crossorigin="anonymous">
+  <title>Jewellery Login</title>
 </head>
 
 <body class="page__body">
@@ -25,7 +19,7 @@
         </svg>
       </button>
       <form class="page-header__search-form search-form" action="https://echo.htmlacademy.ru" method="POST">
-        <input type="search" placeholder="Type here to search" aria-label="Site search" tabindex="0">
+        <input type="search" placeholder="Type here to search" aria-label="Site search" tabindex="0" required="">
         <button class="search-form__button-submit" type="submit">
           <span class="visually-hidden">Search</span>
           <svg class="search-form__icon-search" width="14" height="14">
@@ -33,7 +27,7 @@
           </svg>
         </button>
       </form>
-      <a class="page-header__index-link" href="index.html">
+      <a class="page-header__index-link" href="./index.html">
         <svg class="page-header__main-logo" width="66" height="66">
           <use xlink:href="./img/sprite_auto.svg#icon-main-logo"></use>
         </svg>
@@ -67,7 +61,7 @@
       <div class="modal-login__block">
         <form class="modal-login__form" action="https://echo.htmlacademy.ru" method="POST">
           <h1 class="modal-login__title">Log In</h1>
-          <input type="text" placeholder="Your E-mail" aria-label="Site login" required="" autofocus="">
+          <input class="modal-login__email-input" type="text" placeholder="Your E-mail" aria-label="Site login" required="" autofocus="">
           <input type="text" placeholder="Password" aria-label="Site password" required="">
           <a class="modal-login__restore-password" href="#">Forgot your password?</a>
           <button class="modal-login__login-button" type="submit">Login</button>

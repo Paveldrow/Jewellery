@@ -10,6 +10,14 @@
   }
 }
 
+.search-form:hover .search-form__icon-search {
+  fill: $light;
+}
+
+.search-form:active .search-form__icon-search {
+  fill: darken($light, 20%);
+}
+
 .search-form input {
   box-sizing: border-box;
   border: none;
@@ -24,6 +32,7 @@
   border-bottom: 1px solid transparent;
   background-color: transparent;
   outline: none;
+  cursor: pointer;
 
   @media (max-width: $tablet-width) {
     color: $white;

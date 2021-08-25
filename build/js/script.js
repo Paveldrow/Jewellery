@@ -1,22 +1,3 @@
-// 'use strict';
-// var pageHeader = document.querySelector('.page-header');
-// var headerToggle = document.querySelector('.page-header__toggle');
-
-// pageHeader.classList.remove('page-header--nojs');
-
-// headerToggle.addEventListener('click', function () {
-//   if (pageHeader.classList.contains('page-header--closed')) {
-//     pageHeader.classList.remove('page-header--closed');
-//     pageHeader.classList.add('page-header--opened');
-//   } else {
-//     pageHeader.classList.add('page-header--closed');
-//     pageHeader.classList.remove('page-header--opened');
-//   }
-// });
-
-
-// Login modal
-
 const pageHeader = document.querySelector('.page-header');
 const menuButton = document.querySelector('.page-header__button-menu');
 
@@ -24,8 +5,38 @@ const page = document.querySelector('.page__body');
 const loginModal = document.querySelector('.modal-login');
 const loginModalOpenButton = document.querySelector('.user-nav__link--login');
 const loginModalcloseButton = document.querySelector('.modal-login__close-button');
-const email = document.querySelector('.modal-login__form > input');
 
+const loginInputEmail = document.querySelector('.modal-login__email-input');
+const modalLogin = document.querySelector('.modal-login__form');
+
+const cartModal = document.querySelector('.modal-cart');
+const addToCartButton = document.querySelector('.product__button-add-cart');
+const cartModalCloseButton = document.querySelector('.modal-cart__close-button');
+
+const filter = document.querySelector('.filter');
+const openFilterButton = document.querySelector('.catalog__filter-button ');
+const closeFilterButton = document.querySelector('.filter__button--close');
+const filterItemTitles = document.querySelectorAll('.filter__list-title');
+
+
+const KEYCODE_TAB = 9;
+
+const faqItems = document.querySelectorAll('.faq__item');
+
+const searchInput = document.querySelector('.search-form > input');
+
+
+const slider = document.querySelector('.slider');
+const sliderContainer = document.querySelector('.swiper-container');
+const paginationBlock = document.querySelector('.slider-pagination');
+const currentDotOut = document.querySelector('.slider-mobile-pagination__current');
+const totalDotsOut = document.querySelector('.slider-mobile-pagination__total');
+let swiper;
+
+const ACTIVE_BULLET_CLASS = 'swiper-pagination-bullet-active';
+const BREAKPOINT_MOBILE = 767;
+
+// Login modal
 const isEscEvent = (evt) => {
   return evt.key === ('Escape' || 'Esc');
 };
@@ -47,7 +58,8 @@ const onLoginModalClickOverlay = function (evt) {
 const openLoginModal = function () {
   page.classList.add('page__body--open-modal');
   loginModal.classList.add('modal-login--open');
-  email.focus();
+  loginInputEmail.focus();
+  getLocalStorage(loginInputEmail);
   document.addEventListener('keydown', onLoginModalEscKeydown);
   loginModal.addEventListener('click', onLoginModalClickOverlay);
 };
@@ -57,6 +69,14 @@ const closeLoginModal = function () {
   loginModal.classList.remove('modal-login--open');
   document.removeEventListener('keydown', onLoginModalEscKeydown);
   loginModal.removeEventListener('click', onLoginModalClickOverlay);
+};
+
+const setLocalStorage = (input) => {
+  localStorage.setItem('login', input.value);
+};
+
+const getLocalStorage = (input) => {
+  input.value = localStorage.getItem('login');
 };
 
 loginModalOpenButton.addEventListener('click', (evt) => {
@@ -69,12 +89,11 @@ loginModalcloseButton.addEventListener('click', () => {
   closeLoginModal()
 });
 
-// // Cart modal
+modalLogin.addEventListener("submit", function (evt) {
+  setLocalStorage(loginInputEmail);
+});
 
-const cartModal = document.querySelector('.modal-cart');
-const addToCartButton = document.querySelector('.product__button-add-cart');
-const cartModalCloseButton = document.querySelector('.modal-cart__close-button');
-
+// Cart modal
 const onCartnModalEscKeydown = function (evt) {
   if (isEscEvent(evt)) {
     evt.preventDefault();
@@ -115,8 +134,7 @@ if (cartModalCloseButton) {
   });
 };
 
-// // open menu
-
+// Open menu
 const controlMenu = function () {
   pageHeader.classList.toggle('page-header--open-menu');
 };
@@ -126,12 +144,6 @@ menuButton.addEventListener('click', () => {
 });
 
 // Open Filter
-
-const filter = document.querySelector('.filter');
-const openFilterButton = document.querySelector('.catalog__filter-button ');
-const closeFilterButton = document.querySelector('.filter__button--close');
-const filterItemTitles = document.querySelectorAll('.filter__list-title');
-
 const openFilterItem = function (items) {
   items.forEach((element) => {
     element.addEventListener('click', () => {
@@ -154,6 +166,7 @@ const closeFilter = function () {
 if (filter) {
   openFilterButton.addEventListener('click', () => {
     openFilter();
+  openFilterItem(filterItemTitles)
   });
 };
 
@@ -164,14 +177,15 @@ if (closeFilterButton) {
   });
 };
 
+if (filter) {
+  openFilterItem(filterItemTitles);
+}
+
 // // Trap focus
-
 const trapFocus = function (element) {
-  var focusableEls = element.querySelectorAll('a[href]:not([disabled]), button:not([disabled]), textarea:not([disabled]), input[type="text"]:not([disabled]), input[type="radio"]:not([disabled]), input[type="checkbox"]:not([disabled]), select:not([disabled])');
-  var firstFocusableEl = focusableEls[0];
-  var lastFocusableEl = focusableEls[focusableEls.length - 1];
-  var KEYCODE_TAB = 9;
-
+  const focusableEls = element.querySelectorAll('a[href]:not([disabled]), button:not([disabled]), textarea:not([disabled]), input[type="text"]:not([disabled]), input[type="radio"]:not([disabled]), input[type="checkbox"]:not([disabled]), select:not([disabled])');
+  const firstFocusableEl = focusableEls[0];
+  const lastFocusableEl = focusableEls[focusableEls.length - 1];
   element.addEventListener('keydown', function (e) {
     var isTabPressed = (e.key === 'Tab' || e.keyCode === KEYCODE_TAB);
     if (!isTabPressed) {
@@ -192,11 +206,8 @@ const trapFocus = function (element) {
   });
 };
 
-// // Input Search reset
-
+// Input Search reset
 const searchInputClean = function () {
-  const searchInput = document.querySelector('.search-form > input');
-
   if (window.innerWidth <= 1023) {
     searchInput.placeholder = '';
   } else {
@@ -208,8 +219,7 @@ window.addEventListener('resize', () => {
   searchInputClean();
 });
 
-const faqItems = document.querySelectorAll('.faq__item');
-
+// Faq accordeon
 const openingAccordeon = function (items) {
   items.forEach((element) => {
     element.addEventListener('click', () => {
@@ -220,19 +230,7 @@ const openingAccordeon = function (items) {
 
 openingAccordeon(faqItems);
 
-// new Swiper('.slider');
-
-const slider = document.querySelector('.slider');
-const sliderContainer = document.querySelector('.swiper-container');
-const paginationBlock = document.querySelector('.slider-pagination');
-const currentDotOut = document.querySelector('.slider-mobile-pagination__current');
-const totalDotsOut = document.querySelector('.slider-mobile-pagination__total');
-let swiper;
-
-const ACTIVE_BULLET_CLASS = 'swiper-pagination-bullet-active';
-const BREAKPOINT_MOBILE = 767;
-
-
+//Swiper slider
 const initSwapper = function () {
   if (slider) {
     swiper = new Swiper('.swiper-container', {
@@ -243,7 +241,6 @@ const initSwapper = function () {
       spaceBetween: 30,
       centeredSlidesBounds: true,
 
-      // If we need pagination
       pagination: {
         el: document.querySelector('.slider-pagination'),
         clickable: 'true',
@@ -252,7 +249,6 @@ const initSwapper = function () {
         },
       },
 
-      // Navigation arrows
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -272,61 +268,58 @@ const initSwapper = function () {
           slidesPerGroup: 4,
         },
       },
-
     });
     initSlider();
-  }
-}
-
+  };
+};
 
 const getBullets = function () {
   let bullets;
   if (paginationBlock) {
     bullets = paginationBlock.children;
-  }
+  };
   return bullets;
-}
+};
 
 const setMobileTotalBullet = function (bullets) {
-  let totalBullets = bullets.length;
-
+  let totalBullets = bullets.length
   return totalBullets;
-}
+};
 
 const setMobileCurrentBullet = function (bullets) {
   let currentBullet;
   Array.from(bullets).forEach((element) => {
     if (element.classList.contains(ACTIVE_BULLET_CLASS)) {
       currentBullet = +element.textContent;
-    }
+    };
   });
 
   return currentBullet;
-}
+};
 
 const renderMobilePagination = function (bullets) {
   totalDotsOut.textContent = setMobileTotalBullet(bullets);
   currentDotOut.textContent = setMobileCurrentBullet(bullets);
-}
+};
 
 const realIndexChangeHandler = function (bullets) {
   swiper.on('transitionEnd', function () {
     renderMobilePagination(bullets);
   });
-}
+};
 
 const setMobilePagination = function () {
   let bullets = getBullets();
   realIndexChangeHandler(bullets);
-}
+};
 
 const breakpointChangeHandler = function () {
   let viewport = document.documentElement.clientWidth;
 
   if (viewport < BREAKPOINT_MOBILE) {
     setMobilePagination();
-  }
-}
+  };
+};
 
 const initMobilePagination = function () {
   let bullets = getBullets();
@@ -334,13 +327,9 @@ const initMobilePagination = function () {
 };
 
 const initSlider = function () {
-
-
   initMobilePagination();
   breakpointChangeHandler();
   swiper.on('breakpoint', breakpointChangeHandler);
-}
-
+};
 
 initSwapper();
-

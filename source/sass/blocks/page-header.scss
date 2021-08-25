@@ -120,8 +120,7 @@
   fill: $white;
 }
 
-.page-header__index-link .page-header__main-logo {
-
+.page-header__index-link[href] .page-header__main-logo {
   &:focus,
   &:hover {
     fill: $black;

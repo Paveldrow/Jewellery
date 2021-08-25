@@ -38,10 +38,20 @@
 
 .pagination__button {
   background-color: transparent;
-  font-family: 'Poppins';
+  font-family: "Poppins", "Arial", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 21px;
   border: none;
   color: $dark;
+  cursor: pointer;
+
+  &:focus,
+  &:hover {
+    color: $light;
+  }
+
+  &:active {
+    color: darken($light, 20%);
+  }
 }

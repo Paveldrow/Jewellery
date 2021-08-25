@@ -30,6 +30,15 @@
 
 .social__link {
   color: $white;
+
+  &:focus,
+  &:hover {
+    color: $light;
+  }
+
+  &:active {
+    color: darken($light, 20%);
+  }
 }
 
 .social__icon {
@@ -42,6 +51,16 @@
     width: 20px;
     height: 21px;
     margin-right: 29px;
+  }
+}
+
+.social__link {
+
+  &:focus,
+  &:hover {
+    .social__icon {
+      fill: $light;
+    }
   }
 }
 

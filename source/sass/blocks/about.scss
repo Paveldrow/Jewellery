@@ -14,4 +14,13 @@
   font-size: 18px;
   line-height: 23px;
   color: $about-header;
+
+  &:focus,
+  &:hover {
+    color: lighten($light, 10%);
+  }
+
+  &:active {
+    color: darken($light, 20%);
+  }
 }

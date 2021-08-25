@@ -39,13 +39,8 @@
   }
 }
 
-
 .slider__list {
-  //   display: flex;
-  //   justify-content: space-between;
-  // max-width: 1170px;
   margin-bottom: 50px;
-
 
   @media (max-width: $tablet-width) {
     max-width: 678px;
@@ -59,7 +54,6 @@
 }
 
 .slider__image {
-  // display: block;
   margin-bottom: 16px;
 
   @media (max-width: $tablet-width) {
@@ -122,5 +116,18 @@
   @media (max-width: $tablet-width) {
     width: 35px;
     height: 15px;
+  }
+}
+
+
+.slider__button .slider__icon-button {
+
+  &:focus,
+  &:hover {
+    stroke: $black;
+  }
+
+  &:active {
+    stroke: darken($light, 20%);
   }
 }

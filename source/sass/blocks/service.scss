@@ -41,4 +41,13 @@
 
 .service__link {
   color: $white;
+
+  &:focus,
+  &:hover {
+    color: $light;
+  }
+
+  &:active {
+    color: darken($light, 20%);
+  }
 }

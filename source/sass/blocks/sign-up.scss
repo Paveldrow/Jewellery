@@ -2,11 +2,10 @@
   width: auto;
 }
 
-
 .sign-up__title {
   margin: 0;
   margin-bottom: 10px;
-  font-family: 'Cormorant Garamond';
+  font-family: "Cormorant Garamond", "Arial", sans-serif;
   font-weight: 700;
   font-size: 34px;
   line-height: 44px;
@@ -43,18 +42,24 @@
   @media (max-width: $tablet-width) {
     padding-bottom: 8px;
   }
+
+  &:focus,
+  &:hover {
+    border-color: $light;
+  }
 }
 
 .sign-up__form input {
   width: 300px;
   margin-right: auto;
-  font-family: 'Poppins';
+  font-family: "Poppins", "Arial", sans-serif;
   font-weight: 500;
   font-size: 14px;
   line-height: 21px;
   color: $white;
   background-color: transparent;
   border: none;
+  cursor: pointer;
 
   @media (max-width: $tablet-width) {
     padding-left: 0;
@@ -71,13 +76,23 @@
 
 .sign-up__button-submit {
   padding: 0;
-  font-family: 'Poppins';
+  font-family: "Poppins", "Arial", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 21px;
   background-color: transparent;
   border: none;
   color: $white;
+  cursor: pointer;
+
+  &:focus,
+  &:hover {
+    color: $light;
+  }
+
+  &:active {
+    color: darken($light, 20%);
+  }
 
   @media (max-width: $tablet-width) {
     padding-right: 0;
