@@ -5,12 +5,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Main page of jewelery accessories store Jewellery">
   <link rel="stylesheet" href="css/style.min.css">
+  <link href="./fonts/Poppins-Bold.woff2" as="font" rel="preload" crossorigin="anonymous">
   <link href="./fonts/Poppins-Medium.woff2" as="font" rel="preload" crossorigin="anonymous">
+  <link href="./fonts/Poppins-Regular.woff2" as="font" rel="preload" crossorigin="anonymous">
+  <link href="./fonts/Cormorant-Garamond-Bold.woff2" as="font" rel="preload" crossorigin="anonymous">
+  <link href="./fonts/Cormorant-Garamond-SemiBold.woff2" as="font" rel="preload" crossorigin="anonymous">
+  <link href="./fonts/Cormorant-Garamond-Medium-Italic.woff2" as="font" rel="preload" crossorigin="anonymous">
+  <link href="./fonts/Cormorant-Garamond-Regular-Italic.woff2" as="font" rel="preload" crossorigin="anonymous">
   <title>Jewellery Login</title>
 </head>
 
-<body class="page__body">
+<body class="page__body page__body--no-js">
   <header class="page-header">
     <nav class="page-header__main-nav wrapper">
       <button class="page-header__button-menu"><span class="visually-hidden">Меню</span>
@@ -19,7 +26,7 @@
         </svg>
       </button>
       <form class="page-header__search-form search-form" action="https://echo.htmlacademy.ru" method="POST">
-        <input type="search" placeholder="Type here to search" aria-label="Site search" tabindex="0" required="">
+        <input type="search" placeholder="Type here to search" name="search" aria-label="Site search" tabindex="0" required="">
         <button class="search-form__button-submit" type="submit">
           <span class="visually-hidden">Search</span>
           <svg class="search-form__icon-search" width="14" height="14">
@@ -50,9 +57,9 @@
         <li class="site-nav__item"><a class="site-nav__link" href="#">Earrings</a></li>
       </ul>
       <ul class="page-header__about about">
-        <li class="about__item"><a class="about__link" href="">About CH</a></li>
-        <li class="about__item"><a class="about__link" href="">Stores & Hours</a></li>
-        <li class="about__item"><a class="about__link" href="">Contact Us</a></li>
+        <li class="about__item"><a class="about__link" href="#">About CH</a></li>
+        <li class="about__item"><a class="about__link" href="#">Stores & Hours</a></li>
+        <li class="about__item"><a class="about__link" href="#">Contact Us</a></li>
       </ul>
     </nav>
   </header>
@@ -61,11 +68,11 @@
       <div class="modal-login__block">
         <form class="modal-login__form" action="https://echo.htmlacademy.ru" method="POST">
           <h1 class="modal-login__title">Log In</h1>
-          <input class="modal-login__email-input" type="text" placeholder="Your E-mail" aria-label="Site login" required="" autofocus="">
-          <input type="text" placeholder="Password" aria-label="Site password" required="">
+          <input class="modal-login__email-input" type="text" placeholder="Your E-mail" name="login-email" aria-label="Site login" required="" autofocus="">
+          <input type="text" placeholder="Password" name="login-password" aria-label="Site password" required="">
           <a class="modal-login__restore-password" href="#">Forgot your password?</a>
           <button class="modal-login__login-button" type="submit">Login</button>
-          <p class="modal-login__sign-up">Don’t have an account? <a class="modal-login__sign-up-link" href="#">Sin Up</a></p>
+          <p class="modal-login__sign-up">Don’t have an account? <a class="modal-login__sign-up-link" href="#">Sign up</a></p>
         </form>
       </div>
     </section>
@@ -76,7 +83,7 @@
         <p class="sign-up__title">The good stuff in your inbox</p>
         <p class="sign-up__subtitle">News and updates from CH. No spam, we promise.</p>
         <form class="sign-up__form" action="https://echo.htmlacademy.ru" method="POST">
-          <input type="text" placeholder="Your E-mail" aria-label="Enter e-mail for sign up" required="">
+          <input type="text" placeholder="Your E-mail" name="sign up email" aria-label="Enter e-mail for sign up" required="">
           <button class="sign-up__button-submit" type="submit">Sign Up
             <svg class="sign-up__button-icon" width="30" height="11">
               <use xlink:href="./img/sprite_auto.svg#icon-arrow"></use>

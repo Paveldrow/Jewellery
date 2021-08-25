@@ -94,3 +94,7 @@ input[type="search"]::-webkit-search-results-decoration {
 .page-header--open-menu .search-form__icon-search {
   fill: $white;
 }
+
+.page__body--no-js .search-form__icon-search {
+  fill: $white;
+}

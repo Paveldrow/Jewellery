@@ -13,6 +13,14 @@
   }
 }
 
+.page-header--open-menu + .page-main {
+  padding-top: 0;
+}
+
+.page__body--no-js .page-main {
+  padding-top: 0;
+}
+
 .page-main__catalog-wrapper {
   display: flex;
 

@@ -1,3 +1,5 @@
+const pageBody = document.querySelector('.page__body');
+
 const pageHeader = document.querySelector('.page-header');
 const menuButton = document.querySelector('.page-header__button-menu');
 
@@ -12,6 +14,7 @@ const modalLogin = document.querySelector('.modal-login__form');
 const cartModal = document.querySelector('.modal-cart');
 const addToCartButton = document.querySelector('.product__button-add-cart');
 const cartModalCloseButton = document.querySelector('.modal-cart__close-button');
+const cartModalCheckoutButton = document.querySelector('.modal-cart__button--checkout');
 
 const filter = document.querySelector('.filter');
 const openFilterButton = document.querySelector('.catalog__filter-button ');
@@ -35,6 +38,8 @@ let swiper;
 
 const ACTIVE_BULLET_CLASS = 'swiper-pagination-bullet-active';
 const BREAKPOINT_MOBILE = 767;
+
+pageBody.classList.remove('page__body--no-js');
 
 // Login modal
 const isEscEvent = (evt) => {
@@ -111,6 +116,8 @@ const onCartnModalClickOverlay = function (evt) {
 const openCartModal = function () {
   page.classList.add('page__body--open-modal');
   cartModal.classList.add('modal-cart--open');
+  cartModalCheckoutButton.focus();
+  trapFocus(cartModal);
   document.addEventListener('keydown', onCartnModalEscKeydown);
   cartModal.addEventListener('click', onCartnModalClickOverlay);
 };
@@ -166,7 +173,7 @@ const closeFilter = function () {
 if (filter) {
   openFilterButton.addEventListener('click', () => {
     openFilter();
-  openFilterItem(filterItemTitles)
+    openFilterItem(filterItemTitles)
   });
 };
 
@@ -214,6 +221,8 @@ const searchInputClean = function () {
     searchInput.placeholder = 'Type here to search';
   };
 };
+
+searchInputClean();
 
 window.addEventListener('resize', () => {
   searchInputClean();

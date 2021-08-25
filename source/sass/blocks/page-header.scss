@@ -29,6 +29,18 @@
   }
 }
 
+.page__body--no-js .page-header {
+  @media (max-width: $tablet-width) {
+
+    background-color: $accent-color;
+    padding-bottom: 75px;
+
+    @media (max-width: $mobile-width) {
+      padding-bottom: 44px;
+    }
+  }
+}
+
 .page-header__main-nav {
   display: flex;
   align-items: flex-start;
@@ -55,6 +67,10 @@
   @media (max-width: $mobile-width) {
     margin-top: 17px;
   }
+}
+
+.page__body--no-js .page-header__button-menu {
+  display: none;
 }
 
 .page-header__icon-menu {
@@ -101,6 +117,12 @@
   }
 }
 
+.page__body--no-js .page-header__search-form {
+  @media (max-width: $tablet-width) {
+    display: flex
+  }
+}
+
 .page-header__index-link {
   margin-left: auto;
   margin-right: auto;
@@ -120,7 +142,14 @@
   fill: $white;
 }
 
+.page__body--no-js .page-header__main-logo {
+  @media (max-width: $tablet-width) {
+    fill: $white;
+  }
+}
+
 .page-header__index-link[href] .page-header__main-logo {
+
   &:focus,
   &:hover {
     fill: $black;
@@ -162,8 +191,17 @@
   }
 }
 
+.page__body--no-js .page-header__user-nav {
+  &--login {
+    @media (max-width: $tablet-width) {
+      display: block;
+    }
+  }
+}
+
 .page-header__site-nav {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   width: 100%;
 
@@ -178,6 +216,12 @@
   display: block;
 }
 
+.page__body--no-js .page-header__site-nav {
+  @media (max-width: $tablet-width) {
+    display: block;
+  }
+}
+
 .page-header__about {
   display: none;
 
@@ -188,5 +232,9 @@
 }
 
 .page-header--open-menu .page-header__about {
+  display: block;
+}
+
+.page__body--no-js .page-header__about {
   display: block;
 }
