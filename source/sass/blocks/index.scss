@@ -1,7 +1,13 @@
 .index {
   list-style: none;
   margin: 0;
+  margin-top: 50px;
+  margin-left: 30px;
   padding: 0;
+
+  @media (max-width: $mobile-width) {
+    margin-left: 15px;
+  }
 }
 
 .index__item {
@@ -9,10 +15,18 @@
 }
 
 .index__link {
+  font-family: "Cormorant Garamond", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 44px;
   color: $dark;
 
   &:hover,
   &:focus {
     color: $accent-color;
+  }
+
+  &:active {
+    color: lighten($accent-color, 20%);
   }
 }

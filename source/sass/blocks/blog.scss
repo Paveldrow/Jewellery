@@ -62,33 +62,27 @@
     grid-column: 1 / 2;
     grid-row: 1 / 2;
     background-image: url("../img/blog-care-for-jewellery-desktop.jpg");
-    background-image: -webkit-image-set(url("../img/blog-care-for-jewellery-desktop.webp") 1x);
     background-size: 285px 300px;
 
     @media (min-resolution: $retina-display) {
       background-image: url("../img/blog-care-for-jewellery-desktop@2x.jpg");
-      background-image: -webkit-image-set(url("../img/blog-care-for-jewellery-desktop@2x.webp") 2x);
     }
 
     @media (max-width: $tablet-width) {
       background-image: url("../img/blog-care-for-jewellery-tablet.jpg");
-      background-image: -webkit-image-set(url("../img/blog-care-for-jewellery-tablet.webp") 1x);
       background-size: 339px 300px;
 
       @media (min-resolution: $retina-display) {
         background-image: url("../img/blog-care-for-jewellery-tablet@2x.jpg");
-        background-image: -webkit-image-set(url("../img/blog-care-for-jewellery-tablet@2x.webp") 2x);
       }
     }
 
     @media (max-width: $mobile-width) {
       background-image: url("../img/blog-care-for-jewellery-mobile.jpg");
-      background-image: -webkit-image-set(url("../img/blog-care-for-jewellery-mobile.webp") 1x);
       background-size: 290px 256px;
 
       @media (min-resolution: $retina-display) {
         background-image: url("../img/blog-care-for-jewellery-mobile@2x.jpg");
-        background-image: -webkit-image-set(url("../img/blog-care-for-jewellery-mobile@2x.webp") 2x);
       }
     }
   }
@@ -97,34 +91,28 @@
     grid-column: 1 / 2;
     grid-row: 2 / 3;
     background-image: url("../img/blog-power-of-crystal-desktop.jpg");
-    background-image: -webkit-image-set(url("../img/blog-power-of-crystal-desktop.webp") 1x);
     background-size: 285px 300px;
     background-position: right 0 top 0;
 
     @media (min-resolution: $retina-display) {
       background-image: url("../img/blog-power-of-crystal-desktop@2x.jpg");
-      background-image: -webkit-image-set(url("../img/blog-power-of-crystal-desktop@2x.webp") 2x);
     }
 
     @media (max-width: $tablet-width) {
       background-image: url("../img/blog-power-of-crystal-tablet.jpg");
-      background-image: -webkit-image-set(url("../img/blog-power-of-crystal-tablet.webp") 1x);
       background-size: 339px 300px;
 
       @media (min-resolution: $retina-display) {
         background-image: url("../img/blog-power-of-crystal-tablet@2x.jpg");
-        background-image: -webkit-image-set(url("../img/blog-power-of-crystal-tablet@2x.webp") 2x);
       }
     }
 
     @media (max-width: $mobile-width) {
       background-image: url("../img/blog-power-of-crystal-mobile.jpg");
-      background-image: -webkit-image-set(url("../img/blog-power-of-crystal-mobile.webp") 1x);
       background-size: 290px 256px;
 
       @media (min-resolution: $retina-display) {
         background-image: url("../img/blog-power-of-crystal-mobile@2x.jpg");
-        background-image: -webkit-image-set(url("../img/blog-power-of-crystal-mobile@2x.webp") 2x);
       }
     }
   }
@@ -138,33 +126,27 @@
   grid-column: 2 / 3;
   grid-row: 1 / 3;
   background-image: url("../img/blog-19-trends-desktop.jpg");
-  background-image: -webkit-image-set(url("../img/blog-19-trends-desktop.webp") 1x);
   background-size: 570px 630px;
 
   @media (min-resolution: $retina-display) {
     background-image: url("../img/blog-19-trends-desktop@2x.jpg");
-    background-image: -webkit-image-set(url("../img/blog-19-trends-desktop@2x.webp") 2x);
   }
 
   @media (max-width: $tablet-width) {
     background-image: url("../img/blog-19-trends-tablet.jpg");
-    background-image: -webkit-image-set(url("../img/blog-19-trends-tablet.webp") 1x);
     background-size: 339px 300px;
 
     @media (min-resolution: $retina-display) {
       background-image: url("../img/blog-19-trends-tablet@2x.jpg");
-      background-image: -webkit-image-set(url("../img/blog-19-trends-tablet@2x.webp") 2x);
     }
   }
 
   @media (max-width: $mobile-width) {
     background-image: url("../img/blog-19-trends-mobile.jpg");
-    background-image: -webkit-image-set(url("../img/blog-19-trends-mobile.webp") 1x);
     background-size: 290px 256px;
 
     @media (min-resolution: $retina-display) {
       background-image: url("../img/blog-19-trends-mobile@2x.jpg");
-      background-image: -webkit-image-set(url("../img/blog-19-trends-mobile@2x.webp") 2x);
     }
   }
 }

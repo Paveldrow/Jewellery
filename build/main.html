@@ -69,8 +69,6 @@
       <p class="intro__title">Perfection</p>
       <p class="intro__subtitle">made to be yours</p>
     </div>
-
-
     <section class="slider">
       <h2 class="visually-hidden">Novelty slider</h2>
       <p class="slider__title block-title">New In</p>
@@ -247,19 +245,19 @@
     <div class="faq">
       <h2 class="faq__title block-title">Frequently asked questions</h2>
       <ul class="faq__list">
-        <li class="faq__item">
+        <li class="faq__item" tabindex="0">
           <p class="faq__question">What materials are the&nbsp;jewellery made of?</p>
           <p class="faq__answer">Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and semiprecious stones and crystals.</p>
         </li>
-        <li class="faq__item">
+        <li class="faq__item" tabindex="0">
           <p class="faq__question">Which countries do&nbsp;you&nbsp;deliver to?</p>
           <p class="faq__answer">Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and semiprecious stones and crystals.</p>
         </li>
-        <li class="faq__item">
+        <li class="faq__item" tabindex="0">
           <p class="faq__question">What are the payment&nbsp;methods?</p>
           <p class="faq__answer">Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and semiprecious stones and crystals.</p>
         </li>
-        <li class="faq__item">
+        <li class="faq__item" tabindex="0">
           <p class="faq__question">Can I return the jewellery&nbsp;if it didn’t fit me?</p>
           <p class="faq__answer">Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and semiprecious stones and crystals.</p>
         </li>
@@ -393,8 +391,8 @@
       </button>
       <form class="modal-login__form" action="https://echo.htmlacademy.ru" method="POST">
         <h2 class="modal-login__title">Log In</h2>
-        <input class="modal-login__email-input" type="text" placeholder="Your E-mail" name="login-email" aria-label="Site login" required="">
-        <input type="text" placeholder="Password" name="login-password" aria-label="Site password" required="">
+        <input class="modal-login__email-input" type="text" placeholder="Your E-mail" name="login-email" aria-label="Site login" pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})" required="">
+        <input type="password" placeholder="Password" name="login-password" aria-label="Site password" required="">
         <a class="modal-login__restore-password" href="#">Forgot your password?</a>
         <button class="modal-login__login-button" type="submit">Login</button>
         <p class="modal-login__sign-up">Don’t have an account? <a class="modal-login__sign-up-link" href="#">Sin up</a></p>

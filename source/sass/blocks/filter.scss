@@ -44,6 +44,7 @@
   border: none;
   border: 1px solid $accent-color;
   border-bottom: none;
+  cursor: pointer;
 
   &:last-of-type {
     margin-bottom: 35px;
@@ -90,15 +91,6 @@
   font-size: 16px;
   line-height: 21px;
   cursor: pointer;
-
-  &:focus,
-  &:hover {
-    color: $light;
-  }
-
-  &:active {
-    color: darken($light, 20%);
-  }
 }
 
 .filter__list {

@@ -1,20 +1,25 @@
 .slider {
   position: relative;
-  width: auto;
   max-width: 1170px;
   margin-right: auto;
   margin-left: auto;
+ 
 
   @media (max-width: 1365px) {
-    max-width: 870px;
+    max-width: auto;
+    margin-left: 98px;
+    margin-right: 98px;
   }
 
   @media (max-width: $tablet-width) {
     max-width: 678px;
+    margin: 0 auto;
   }
 
   @media (max-width: $mobile-width) {
-    max-width: 290px;
+    max-width: auto;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
@@ -40,6 +45,8 @@
 }
 
 .slider__list {
+  max-width: 678px;
+
   margin-bottom: 50px;
 
   @media (max-width: $tablet-width) {
@@ -55,6 +62,8 @@
 
 .slider__image {
   margin-bottom: 16px;
+  width: 324px;
+    height: 340px;
 
   @media (max-width: $tablet-width) {
     width: 324px;

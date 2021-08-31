@@ -17,7 +17,8 @@ const cartModalCloseButton = document.querySelector('.modal-cart__close-button')
 const cartModalCheckoutButton = document.querySelector('.modal-cart__button--checkout');
 
 const filter = document.querySelector('.filter');
-const openFilterButton = document.querySelector('.catalog__filter-button ');
+const filterField = document.querySelectorAll('.filter__field');
+const openFilterButton = document.querySelector('.catalog__filter-button');
 const closeFilterButton = document.querySelector('.filter__button--close');
 const filterItemTitles = document.querySelectorAll('.filter__list-title');
 
@@ -63,6 +64,8 @@ const onLoginModalClickOverlay = function (evt) {
 const openLoginModal = function () {
   page.classList.add('page__body--open-modal');
   loginModal.classList.add('modal-login--open');
+  page.classList.remove('page__body--open-modal');
+  pageHeader.classList.remove('page-header--open-menu');
   loginInputEmail.focus();
   getLocalStorage(loginInputEmail);
   document.addEventListener('keydown', onLoginModalEscKeydown);
@@ -143,6 +146,7 @@ if (cartModalCloseButton) {
 
 // Open menu
 const controlMenu = function () {
+  page.classList.toggle('page__body--open-modal');
   pageHeader.classList.toggle('page-header--open-menu');
 };
 
@@ -154,26 +158,28 @@ menuButton.addEventListener('click', () => {
 const openFilterItem = function (items) {
   items.forEach((element) => {
     element.addEventListener('click', () => {
-      element.parentElement.classList.toggle('filter__field--close');
+      element.classList.toggle('filter__field--close');
     });
   });
 };
 
 const openFilter = function () {
   if (filter) {
+    page.classList.add('page__body--open-modal');
     filter.classList.add('filter--open');
-    openFilterItem(filterItemTitles);
+    openFilterItem(filterField);
   };
 };
 
 const closeFilter = function () {
+  page.classList.remove('page__body--open-modal');
   filter.classList.remove('filter--open');
 };
 
 if (filter) {
   openFilterButton.addEventListener('click', () => {
     openFilter();
-    openFilterItem(filterItemTitles)
+    openFilterItem(filterField)
   });
 };
 
@@ -185,7 +191,7 @@ if (closeFilterButton) {
 };
 
 if (filter) {
-  openFilterItem(filterItemTitles);
+  openFilterItem(filterField);
 }
 
 // // Trap focus

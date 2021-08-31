@@ -466,9 +466,8 @@
     </button>
     <form class="modal-login__form" action="https://echo.htmlacademy.ru" method="POST">
       <h2 class="modal-login__title">Log In</h2>
-      <input class="modal-login__email-input" type="text" placeholder="Your E-mail" name="login-email"
-             aria-label="Site login" required>
-      <input type="text" placeholder="Password" name="login-password" aria-label="Site password" required>
+      <input class="modal-login__email-input" type="text" placeholder="Your E-mail" name="login-email" aria-label="Site login" pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})" required>
+      <input type="password" placeholder="Password" name="login-password" aria-label="Site password" required>
       <a class="modal-login__restore-password" href="#">Forgot your password?</a>
       <button class="modal-login__login-button" type="submit">Login</button>
       <p class="modal-login__sign-up">Don’t have an account? <a class="modal-login__sign-up-link" href="#">Sin up</a>

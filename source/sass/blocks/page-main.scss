@@ -2,7 +2,6 @@
 
   &--product-card {
     padding-top: 69px;
-  }
 
   @media (max-width: $tablet-width) {
     padding-top: 20px;
@@ -11,6 +10,7 @@
   @media (max-width: $mobile-width) {
     padding-top: 0;
   }
+}
 }
 
 .page-header--open-menu + .page-main {
