@@ -1,0 +1,18 @@
+.index {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.index__item {
+  margin-bottom: 10px;
+}
+
+.index__link {
+  color: $dark;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
