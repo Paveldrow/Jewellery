@@ -9,17 +9,21 @@
   @media (max-width: $mobile-width) {
     flex-direction: column;
     margin-bottom: 56px;
-    align-items: center
+    // align-items: center
   }
 }
 
 .product__info {
   flex-grow: 1;
   order: 1;
-  max-width: 370px;
+  // max-width: 370px;
 
   @media (max-width: $tablet-width) {
-    max-width: 319px;
+    // max-width: 319px;
+  }
+
+  @media (max-width: $mobile-width) {
+    // max-width: auto;
   }
 }
 
@@ -231,6 +235,8 @@
     width: 290px;
     height: 260px;
     margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
