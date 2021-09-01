@@ -147,3 +147,16 @@
     line-height: 20px;
   }
 }
+
+.faq__button {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+
+.faq__button:focus+.faq__question {
+  color: $light;
+}

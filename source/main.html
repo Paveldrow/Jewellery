@@ -245,19 +245,25 @@
     <div class="faq">
       <h2 class="faq__title block-title">Frequently asked questions</h2>
       <ul class="faq__list">
-        <li class="faq__item" tabindex="0">
+        <li class="faq__item">
+          <button class="faq__button" type="button"><span class="visually-hidden">faq button</span></button>
           <p class="faq__question">What materials are the&nbsp;jewellery made of?</p>
           <p class="faq__answer">Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and semiprecious stones and crystals.</p>
         </li>
-        <li class="faq__item" tabindex="0">
+        <li class="faq__item">
+          <button class="faq__button" type="button"><span class="visually-hidden">faq button</span></button>
           <p class="faq__question">Which countries do&nbsp;you&nbsp;deliver to?</p>
           <p class="faq__answer">Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and semiprecious stones and crystals.</p>
         </li>
-        <li class="faq__item" tabindex="0">
+        <li class="faq__item">
+          <button class="faq__button" type="button"><span class="visually-hidden">faq button</span></button>
+
           <p class="faq__question">What are the payment&nbsp;methods?</p>
           <p class="faq__answer">Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and semiprecious stones and crystals.</p>
         </li>
-        <li class="faq__item" tabindex="0">
+        <li class="faq__item">
+          <button class="faq__button" type="button"><span class="visually-hidden">faq button</span></button>
+
           <p class="faq__question">Can I return the jewellery&nbsp;if it didn’t fit me?</p>
           <p class="faq__answer">Our jewellerry is made of solid gold, silver or leather. Also, some jewellery contains precious and semiprecious stones and crystals.</p>
         </li>
@@ -335,7 +341,7 @@
         <p class="sign-up__title">The good stuff in your inbox</p>
         <p class="sign-up__subtitle">News and updates from CH. No spam, we promise.</p>
         <form class="sign-up__form" action="https://echo.htmlacademy.ru" method="POST">
-          <input type="text" placeholder="Your E-mail" name="sign up email" aria-label="Enter e-mail for sign up" required>
+          <input type="text" placeholder="Your E-mail" name="sign up email" aria-label="Enter e-mail for sign up" pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})" required>
           <button class="sign-up__button-submit" type="submit">Sign Up
             <svg class="sign-up__button-icon" width="30" height="11">
               <use xlink:href="./img/sprite_auto.svg#icon-arrow"></use>

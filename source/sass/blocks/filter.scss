@@ -2,13 +2,14 @@
   background-color: $white;
 
   &--open {
-    position: absolute;
-    height: 100%;
+    position: fixed;
+    min-height: 100%;
     top: 0;
     left: 0;
     right: 0;
     padding-top: 27px;
-    overflow: scroll;
+    height: 100%;
+    overflow-y: auto;
   }
 }
 
@@ -32,13 +33,13 @@
 
 .filter--open .filter__form {
   display: block;
+
 }
 
 .filter__field {
   position: relative;
   margin: 0;
   padding: 0;
-  padding-top: 23px;
   padding-bottom: 24px;
   padding-left: 25px;
   border: none;
@@ -74,7 +75,7 @@
 }
 
 .filter__field--close {
-  padding-bottom: 22px;
+  padding-bottom: 0;
 
   &::after {
     transform: none;
@@ -87,6 +88,8 @@
 
 .filter__list-title {
   margin: 0;
+  padding-top: 23px;
+  padding-bottom: 21px;
   font-weight: 500;
   font-size: 16px;
   line-height: 21px;
@@ -95,7 +98,6 @@
 
 .filter__list {
   margin: 0;
-  margin-top: 21px;
   margin-left: 9px;
   padding: 0;
   list-style: none;

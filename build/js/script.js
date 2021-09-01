@@ -64,8 +64,6 @@ const onLoginModalClickOverlay = function (evt) {
 const openLoginModal = function () {
   page.classList.add('page__body--open-modal');
   loginModal.classList.add('modal-login--open');
-  page.classList.remove('page__body--open-modal');
-  pageHeader.classList.remove('page-header--open-menu');
   loginInputEmail.focus();
   getLocalStorage(loginInputEmail);
   document.addEventListener('keydown', onLoginModalEscKeydown);
@@ -158,7 +156,7 @@ menuButton.addEventListener('click', () => {
 const openFilterItem = function (items) {
   items.forEach((element) => {
     element.addEventListener('click', () => {
-      element.classList.toggle('filter__field--close');
+      element.parentNode.classList.toggle('filter__field--close');
     });
   });
 };
@@ -167,7 +165,7 @@ const openFilter = function () {
   if (filter) {
     page.classList.add('page__body--open-modal');
     filter.classList.add('filter--open');
-    openFilterItem(filterField);
+    openFilterItem(filterItemTitles);
   };
 };
 
@@ -179,7 +177,7 @@ const closeFilter = function () {
 if (filter) {
   openFilterButton.addEventListener('click', () => {
     openFilter();
-    openFilterItem(filterField)
+    openFilterItem(filterItemTitles)
   });
 };
 
@@ -191,7 +189,7 @@ if (closeFilterButton) {
 };
 
 if (filter) {
-  openFilterItem(filterField);
+  openFilterItem(filterItemTitles);
 }
 
 // // Trap focus

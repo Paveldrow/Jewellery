@@ -68,7 +68,7 @@
       <div class="modal-login__block">
         <form class="modal-login__form" action="https://echo.htmlacademy.ru" method="POST">
           <h1 class="modal-login__title">Log In</h1>
-          <input class="modal-login__email-input" type="text" placeholder="Your E-mail" name="login-email" aria-label="Site login" required autofocus>
+          <input class="modal-login__email-input" type="text" placeholder="Your E-mail" name="login-email" aria-label="Site login" pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})" required autofocus>
           <input type="password" placeholder="Password" name="login-password" aria-label="Site password" required>
           <a class="modal-login__restore-password" href="#">Forgot your password?</a>
           <button class="modal-login__login-button" type="submit">Login</button>
@@ -83,7 +83,7 @@
         <p class="sign-up__title">The good stuff in your inbox</p>
         <p class="sign-up__subtitle">News and updates from CH. No spam, we promise.</p>
         <form class="sign-up__form" action="https://echo.htmlacademy.ru" method="POST">
-          <input type="text" placeholder="Your E-mail" name="sign up email" aria-label="Enter e-mail for sign up" required>
+          <input type="text" placeholder="Your E-mail" name="sign up email" aria-label="Enter e-mail for sign up" pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})" required>
           <button class="sign-up__button-submit" type="submit">Sign Up
             <svg class="sign-up__button-icon" width="30" height="11">
               <use xlink:href="./img/sprite_auto.svg#icon-arrow"></use>
