@@ -192,6 +192,10 @@
   }
 }
 
+.page-header--open-menu .user-nav__link {
+margin-left: 0;
+}
+
 .page__body--no-js .page-header__user-nav {
   &--login {
     @media (max-width: $tablet-width) {
