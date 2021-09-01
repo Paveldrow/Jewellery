@@ -22,6 +22,7 @@
   &--open-menu {
     background-color: $accent-color;
     padding-bottom: 75px;
+    min-height: 100vh;
 
     @media (max-width: $mobile-width) {
       padding-bottom: 44px;
