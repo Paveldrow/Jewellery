@@ -62,6 +62,7 @@ const onLoginModalClickOverlay = function (evt) {
 };
 
 const openLoginModal = function () {
+  pageHeader.classList.remove('page-header--open-menu');
   page.classList.add('page__body--open-modal');
   loginModal.classList.add('modal-login--open');
   loginInputEmail.focus();
