@@ -12,10 +12,18 @@
 
 .search-form:hover .search-form__icon-search {
   fill: $light;
+
+  @media (max-width: $tablet-width) {
+    fill: $white;
+  }
 }
 
 .search-form:active .search-form__icon-search {
   fill: darken($light, 20%);
+
+  @media (max-width: $tablet-width) {
+    fill: $white;
+  }
 }
 
 .search-form input {
